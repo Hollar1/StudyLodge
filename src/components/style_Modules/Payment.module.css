@@ -1,0 +1,195 @@
+.parent_ramp {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(240, 248, 255, 0.5);
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  background-color: #afeeee;
+}
+
+.logo_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+
+}
+.logo_section img {
+  width: 120px;
+  margin: auto;
+  margin-top: 30px;
+
+}
+
+.payment_section {
+  margin-top: 60px;
+}
+
+.summary_ramp{
+padding-inline-start: 10px;
+  margin-bottom: 10px;
+  border-bottom: solid;
+  padding-bottom: 5px;
+  margin-top: -40px;
+
+}
+.summary_ramp h3{
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+.summary_ramp div{
+  margin-bottom: 5px;
+  font-size: 19px;
+  color: rgb(75, 74, 74);
+  text-transform: capitalize;
+}
+
+
+
+.summary_ramp div span{
+  color: black;
+  font-size: 17px;
+}
+
+
+
+
+
+
+
+
+
+.payment_section fieldset {
+  border-color: #191970;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  border-radius: 10px;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid;
+}
+
+.payment_section fieldset input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 18px;
+  padding-inline-start: 10px;
+  text-transform: capitalize;
+  width: 100%;
+}
+.payment_section legend {
+  font-size: 18px;
+  color: rgb(75, 74, 74);
+  margin-left: 10px;
+  margin-left: 15px;
+}
+
+.exp_date_cvv fieldset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 4px;
+ 
+}
+
+.exp_date_cvv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10px;
+  margin: auto;
+  gap: 20px;
+  padding-bottom: 5px;
+ 
+}
+
+.exp_date_cvv fieldset input {
+  width: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.exp_date_cvv fieldset legend {
+  font-size: 18px;
+  margin-left: 10px;
+}
+.agreed_section {
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  margin-top: 20px;
+}
+.agreed_section input {
+  transform: scale(1.5);
+  margin-left: 10px;
+  accent-color: #191970;
+}
+
+.agreed_section p span {
+  color: #03376b;
+  /* color:rgb(102, 1, 1); */
+  font-weight: bold;
+}
+
+.payment_btn_section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+.payment_btn_section button {
+  width: 200px;
+  height: auto;
+  padding: 5px;
+  font-size: 22px;
+  background-color: #191970;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+ 
+  border: 3px solid #1e90ff;
+  margin-top: 20px;
+}
+
+.payment_modal {
+  width: 90%;
+  height: auto;
+  padding: 10px;
+  background-color: #4682b4;
+
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.payment_modal div h3 {
+  font-size: 22px;
+  word-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #191970;
+  font-weight: bold;
+}
+.modal_text {
+  font-size: 20px;
+  word-spacing: 2px;
+  margin-top: -10px;
+  padding-bottom: 10px;
+}

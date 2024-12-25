@@ -1,0 +1,64 @@
+.parent_ramp {
+  background-color: #191970;
+padding-bottom: 20px;
+}
+
+.ramp {
+  height: auto;
+padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+.ramp div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ramp div img {
+  width: 90px;
+  margin-top: 10px;
+}
+.footer_details {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: white;
+  margin-top: 10px;
+}
+
+.footer_details div div {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+
+.medias{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.facebook img{
+  width: 70px;
+}
+.instagram img{
+  width: 40px;
+}
+.twitter img{
+  width: 50px;
+}
+.youtube {
+  width: 37px;
+  height: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgb(164, 164, 241);
+}
+.youtube img{
+  width: 26px;
+}

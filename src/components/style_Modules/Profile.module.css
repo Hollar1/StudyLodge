@@ -1,0 +1,209 @@
+.user_icon {
+  background-color: rgb(180, 174, 174);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -10px;
+  z-index: 1;
+}
+
+.user_icon img {
+  width: 70px;
+  border-radius: 50%;
+}
+
+.user_details_ramp {
+  width: 300px;
+  height: auto;
+  margin: auto;
+  border-radius: 10px;
+  border: 2px solid;
+
+  margin-top: 120px;
+  background-color: aliceblue;
+}
+fieldset img {
+  width: 150px;
+}
+.user_details_ramp legend {
+  margin: auto;
+}
+.user_ramp {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+  border-bottom: solid;
+  justify-content: space-between;
+  border-color: rgb(209, 206, 206);
+}
+.user_ramp span {
+  margin-top: 3px;
+  padding: 3px 0px;
+  margin-right: 10px;
+  text-transform: capitalize;
+  color: black;
+}
+
+.user_ramp div {
+  font-weight: bold;
+  color: rgb(75, 74, 74);
+}
+
+.edit_acc {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+  background-color: #191970;
+  color: white;
+  width: 220px;
+  margin: auto;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.delete_acc {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+
+  color: red;
+  width: 220px;
+  margin: auto;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 18px;
+  margin-top: 15px;
+}
+.delete_acc span {
+  text-decoration-line: underline;
+  margin-bottom: 20px;
+}
+
+.payment_ramp {
+  font-size: 16px;
+  text-transform: capitalize;
+  margin-top: 40px;
+}
+.payment_ramp legend {
+  margin: auto;
+}
+.payment_ramp fieldset table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.payment_ramp fieldset table,
+tr,
+td {
+  border: solid;
+  border-color: rgb(209, 206, 206);
+  padding: 3px 0px;
+}
+td {
+  padding-left: 4px;
+  /* text-align: center; */
+}
+.price {
+  float: right;
+  margin-right: 3px;
+  font-size: 15px;
+}
+.price_rent {
+  float: right;
+  margin-right: 3px;
+  font-size: 15px;
+}
+.payment_status {
+  width: 92px;
+  font-size: 16px;
+  background-color: #191970;
+  color: white;
+  border-radius: 5px;
+  height: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  padding: 0px 2px;
+}
+
+.notPay_icon {
+color: red;
+margin-top: 4px;
+margin-right: 3px;
+font-size: 18px;
+}
+.not_pay div {
+  color: white;
+}
+.rent_td {
+  display: flex;
+  justify-content: space-between;
+  border: none;
+  align-items: center;
+  height: 35px;
+  
+}
+.pay_status{
+  text-align: center;
+
+}
+.rent_history_ramp {
+  margin-top: 40px;
+  font-size: 16px;
+}
+.rent_history_ramp fieldset{
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border: 2px solid;
+  /* padding-bottom: 10px; */
+  display: flex;
+  flex-direction: column;
+
+}
+
+.rent_history_ramp fieldset h3{
+  background-color:rgb(202, 200, 200);
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:black;
+font-size: 22px;
+  border-top-left-radius: 17px;
+  border-top-right-radius: 17px;
+  width: 100%;
+
+}
+
+.rent_history_ramp fieldset div{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  border-bottom: solid;
+  border-color: rgb(209, 206, 206);
+
+}
+.rent_history_ramp fieldset div span{
+  font-weight: 100;
+}
+.rent_history_ramp fieldset button{
+
+  font-size: 20px;
+
+  background-color: #191970;
+  background-color: #5d84aa;
+  color: white;
+  font-weight: bold;
+
+  border: 3px solid #1e90ff;
+  padding: 5px;
+}

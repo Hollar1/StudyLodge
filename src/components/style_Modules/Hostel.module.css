@@ -1,0 +1,217 @@
+.header_div{
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(189, 251, 251);
+    font-size: 20px;
+    position: sticky;
+    top: 104px;
+}
+
+.accommodation_details_div_ramp div{
+display: flex;
+justify-content: center;
+align-items: center;
+    margin-top: 20px;
+  
+  
+}
+
+.about_hostel_div{
+    margin:10px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+}
+
+
+
+.ifo_section div h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+
+.key_value{
+    display: flex;
+  align-items: center;
+  margin-left: 5px;
+  margin-top: 7px;
+
+}
+
+.key_value div{
+  color: black;
+ 
+    font-size: 16.5px;
+}
+.key_value span{
+    margin-left: 5px;
+    color: rgb(96, 93, 93);
+}
+
+
+
+.feature_section h3{
+  text-align: center;
+  margin-top: 20px;
+}
+.key_valueA{
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 5px;
+  text-transform: capitalize;
+}
+.key_valueA div{
+  color: black;
+ 
+}
+.key_valueA span{
+  color: rgb(96, 93, 93);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.booking_section fieldset legend{
+    margin: auto;
+    font-weight: bold;
+}
+.booking_section fieldset{
+    margin-top: 20px;
+    border: solid 2px;
+    /* padding-bottom: 10px; */
+}
+.nonrefundable_div{
+    text-align: center;
+    background-color: rgb(248, 110, 110);
+    background-color: rgb(211, 200, 200);
+    padding: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    
+}
+
+.select_room_ramp{
+    display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+}
+ .rooms_ramp_div{
+
+ }   
+ .rooms_ramp_div table{
+    border-collapse: collapse;
+  width: 100%;
+  padding:5px;
+  text-transform: capitalize;
+ }
+ .rooms_ramp_div table,thead,tr,td{
+   border-top: solid;
+   border: solid;
+   padding:5px;
+ 
+ }
+ .rooms_ramp_div th{
+    border: solid;
+ }
+ .room_status{
+    font-size: 18px;
+ }
+ .room_td{
+    display: flex;
+    border: none;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+ }
+
+ .agent_fee_btn button{
+width: 100%;
+
+font-size: 18px;
+background-color: #191970;
+color: white;
+font-weight: bold;
+border: 3px solid #1e90ff;
+padding: 7px 0px;
+
+ }
+ 
+ .select_day_time_ramp{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+    font-weight: bold;
+ }
+
+ .day_time_select{
+    display: flex;
+    justify-content: space-between;
+    padding:0px 10px;
+    align-items: center;
+    margin: 5px 0px;
+ }
+
+
+
+ .calender_ramp{
+    display: flex;
+    flex-direction: column;
+   
+  }
+
+
+  .days_time_ramp{
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 10px;
+    border: solid;
+  }
+
+  .calendar_ramp button.selected {
+    background-color: green;
+    color: white;
+    border-color: darkgreen;
+  }
+
+
+
+  .selected_date_time_ramp{
+    padding:3px 5px;
+    font-size: 17px;
+    background-color: azure;
+  }
+  .selected_date_time_ramp p{
+    margin-top: 5px;
+  }
+
+
+
+
+
+
+
+
+
+
