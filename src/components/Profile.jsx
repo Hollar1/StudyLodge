@@ -107,7 +107,7 @@ function Profile() {
                     <div className={ProfileStyles.pay_status}>Paid</div>
                   ) : (
                     <div onClick={()=>{navigate("/payment")}} className={ProfileStyles.payment_status}>
-                      pay
+                      pay rent
                     </div>
                   )}{" "}
                 </td>

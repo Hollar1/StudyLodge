@@ -1,3 +1,600 @@
-.btn{
-    margin-top: 100px;
+.parent_ramp{
+  background-color: rgb(241, 247, 251);
+}
+.display_parent_div {
+  width: 100%;
+  margin-top: 104px;
+  height: 310px;
+  /* border: solid #039494 5px; */
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: #191970;
+}
+.display_ramp {
+  width: 100%;
+  height: 230px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-image: url("../../assets/images/3d3-1.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+.btn_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.prefer{
+  margin-top: 20px;
+
+}
+.btn_div button {
+  width: 220px;
+  font-size: 18px;
+  border-radius: 10px;
+  background-color: #e4f1f1;
+  color: #191970;
+  font-weight: bold;
+  border: 3px solid #1e90ff;
+  padding: 5px;
+}
+.display h3 {
+  margin-top: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+  color: #191970;
+  font-size: 22px;
+
+}
+
+.display p {
+  font-size: 20px;
+  color: #191970;
+  color: white;
+  padding: 0% 5px;
+}
+
+.trusted {
+  margin-top: 30px;
+}
+.trusted h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #191970;
+}
+.trusted p {
+  padding: 0px 10px;
+font-size: 16px;
+
+}
+
+.our_services {
+  background-color: #e4f1f1;
+  padding: 20px 0px;
+  margin-top: 30px;
+  border-radius: 20px;
+}
+
+.our_services h3 {
+  text-align: center;
+  color: #191970;
+  padding: 10px 0px;
+}
+.our_services div {
+  padding: 5px;
+  width: 100%;
+  border-radius: 20px;
+  background-color: rgb(237, 239, 240);
+  background-color: rgb(204, 201, 201);
+  margin-top: 15px;
+}
+
+.our_services_div img {
+  width: 100%;
+  height: 150px;
+  border-radius: 20px;
+}
+.our_services p {
+padding: 0% 10px;
+  font-size: 16px;
+}
+
+.why_chooseUs {
+  margin-top: 30px;
+  background-color: rgb(237, 239, 240);
+  padding-bottom: 50px;
+}
+.why_chooseUs h3 {
+  margin-left: 10px;
+  padding-top: 40px;
+  color: #191970;
+}
+.why_rent {
+  text-align: center;
+  font-size: 17px;
+  font-style: italic;
+  margin-top: 8px;
+  font-weight: bold;
+  color: #191970;
+}
+
+.abc {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0px 10px;
+  margin-top: 30px;
+}
+.icon {
+  font-size: 35px;
+  color: #191970;
+}
+.div_p h4 {
+  color: #191970;
+}
+.div_p p {
+  font-size: 16px;
+}
+
+.review_ramp {
+  height: 430px;
+  width: 100%;
+  margin-top: 30px;
+  background-color: #e4f1f1;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.review_ramp h3 {
+  text-align: center;
+  color: #191970;
+  padding-top: 50px;
+}
+.comments_ramp {
+  background-color: rgb(204, 201, 201);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.reviewer_names {
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+  margin-top: 30px;
+}
+.review_ramp p {
+  font-size: 16px;
+  margin-top: 10px;
+}
+.see_all_review {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.see_all_review button {
+  width: 200px;
+  height: 35px;
+  border-radius: 30px;
+  font-size: 17px;
+  color: #191970;
+  border: solid 2px;
+  border-color: #191970;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.online_video_background {
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+.online_video_background video {
+  width: 100%;
+  height: 100%;
+}
+
+.online_video_background div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  color: white;
+}
+
+.online_video_background div h3 {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.online_video_background p {
+  font-size: 19px;
+  padding: 0px 10px;
+}
+
+.btn_span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+.online_video_background div button {
+  width: 200px;
+  height: 35px;
+  margin: auto;
+  border: 30px;
+  font-size: 18px;
+  border-radius: 30px;
+  font-weight: bold;
+  color: #191970;
+  border: solid 5px;
+}
+
+
+
+.whatsapp{
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+left: 280px;
+z-index: 1;
+}
+
+.whatsapp img{
+  width: 100%;
+  border-radius: 50%;
+}
+
+.customer_care_ramp{
+height:300px;
+background-image: url("../../assets/images/Customer_care_image.jpg");
+background-position: center;
+background-repeat: no-repeat;
+background-size: 100% 100%;
+color: white;
+}
+
+.customer_care_ramp h3{
+  text-align: center;
+  font-size: 22px;
+  padding-top: 15px;
+}
+
+.customer_care_ramp p{
+font-size: 19px;
+padding: 3px 10px;
+ 
+}
+.contact_ramp{
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 5px 0px;
+}
+.contact_ramp div{
+margin-top: 7px;
+margin-left: 10px;
+display: flex;
+align-items: center;
+gap: 10px;
+font-size: 18px;
+color:white;
+
+}
+.contact_ramp div span{
+
+}
+.contact_ramp div a{
+  color:white;
+  text-decoration-line: none;
+}
+.map_icon{
+  font-size:25px;
+}
+
+
+
+
+
+
+.contact_ramp{
+  display: flex;
+  flex-direction: column;
+}
+
+/* MEDIUM SCREEN START HERE */
+
+@media screen and (min-width:375px) {
+  
+.whatsapp{
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+left: 335px;
+z-index: 1;
+}
+
+.whatsapp img{
+  width: 100%;
+  border-radius: 50%;
+}
+
+
+
+
+
+.online_video_background {
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+.online_video_background video {
+  width: 100%;
+  height: 100%;
+}
+
+.online_video_background div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  color: white;
+}
+
+.online_video_background div h3 {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.online_video_background p {
+  font-size: 20px;
+  padding: 0px 20px;
+}
+
+.btn_span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+.online_video_background div button {
+  width: 200px;
+  height: 35px;
+  margin: auto;
+  border: 30px;
+  font-size: 18px;
+  border-radius: 30px;
+  font-weight: bold;
+  color: #191970;
+  border: solid 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.customer_care_ramp{
+  height:300px;
+  background-image: url("../../assets/images/Customer_care_image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: white;
+  }
+  
+  .customer_care_ramp h3{
+    text-align: center;
+    font-size: 22px;
+    padding-top: 25px;
+  }
+  
+  .customer_care_ramp p{
+  font-size: 19px;
+  padding: 3px 15px;
+   
+  }
+  .contact_ramp{
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 5px 0px;
+  }
+  .contact_ramp div{
+  margin-top: 7px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  color:white;
+  
+  }
+  .contact_ramp div span{
+  
+  }
+  .contact_ramp div a{
+    color:white;
+    text-decoration-line: none;
+  }
+  .map_icon{
+    font-size:25px;
+  }
+  
+  
+  
+  
+  
+  
+  .contact_ramp{
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+
+}
+
+
+
+
+
+
+/* LARGE SCREEN */
+
+@media screen and (min-width:425px) {
+  
+.whatsapp{
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+left: 386px;
+z-index: 1;
+}
+
+.whatsapp img{
+  width: 100%;
+  border-radius: 50%;
+}
+
+
+
+.online_video_background {
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+.online_video_background video {
+  width: 100%;
+  height: 100%;
+}
+
+.online_video_background div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  color: white;
+}
+
+.online_video_background div h3 {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.online_video_background p {
+  font-size: 22px;
+  padding: 0px 40px;
+}
+
+.btn_span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+.online_video_background div button {
+  width: 200px;
+  height: 35px;
+  margin: auto;
+  border: 30px;
+  font-size: 18px;
+  border-radius: 30px;
+  font-weight: bold;
+  color: #191970;
+  border: solid 5px;
+}
+
+
+
+
+
+.customer_care_ramp{
+  height:300px;
+  background-image: url("../../assets/images/Customer_care_image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: white;
+  }
+  
+  .customer_care_ramp h3{
+    text-align: center;
+    font-size: 22px;
+    padding-top: 45px;
+  }
+  
+  .customer_care_ramp p{
+  font-size: 19px;
+  padding: 3px 20px;
+   
+  }
+  .contact_ramp{
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 5px 0px;
+  }
+  .contact_ramp div{
+  margin-top: 7px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  color:white;
+  
+  }
+  .contact_ramp div span{
+  
+  }
+  .contact_ramp div a{
+    color:white;
+    text-decoration-line: none;
+  }
+  .map_icon{
+    font-size:25px;
+  }
+  
+  
+  
+  
+  
+  
+  .contact_ramp{
+    display: flex;
+    flex-direction: column;
+  }
+  
+
 }

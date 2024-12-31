@@ -1,0 +1,31 @@
+.parent_ramp {
+  background-color: #e4f1f1;
+}
+.header {
+  margin-top: 110px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(189, 251, 251);
+ padding: 5px 0px;
+  position: sticky;
+  top: 104px;
+}
+.ramp {
+  padding: 0px 20px;
+  font-size: 17px;
+  padding-bottom: 30px;
+}
+.ramp ul {
+  margin-top: 15px;
+}
+.p {
+  padding: 0px 10px;
+  margin: 20px 0px;
+  font-size: 17px;
+}
+.ramp ul h4 {
+  color: #191970;
+  text-align: center;
+}

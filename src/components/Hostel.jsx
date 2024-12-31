@@ -83,7 +83,7 @@ function Hostel() {
 
       <section className={HostelStyles.ifo_section}>
         <div>
-          <h3>INFORMATION</h3>
+          <h3>Information</h3>
         </div>
 
         <div className={HostelStyles.key_value}>

@@ -1,3 +1,7 @@
+
+
+
+
 import React, { useState } from "react";
 import SignUpStyles from "../components/style_Modules/SignUp.module.css";
 import new_logo_001 from "../assets/images/new_logo_001.png";
@@ -10,8 +14,13 @@ import NavBar from "./NavBar";
 import Swal from "sweetalert2";
 import axios from "axios";
 import Notify from "./Notify";
+import { baseUrl } from "./Config";
 
 function SignUp() {
+  const [signUpModal, setSignUpModal] = useState(false);
+  const [signUpSpinner, setSignUpSpinner] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+
   const navigate = useNavigate();
 
   const [signUpDetails, setSignUpDetails] = useState({
@@ -23,6 +32,8 @@ function SignUp() {
     password: "",
   });
 
+  const [mail, setMail] = useState("")
+
   const handleOnchange = (e) => {
     const { value, name } = e.target;
     setSignUpDetails({ ...signUpDetails, [name]: value });
@@ -30,18 +41,12 @@ function SignUp() {
 
   const handleSignUp = async (e) => {
     e.preventDefault();
-    // Swal.fire({
-    //   imageUrl:
-    //     "https://upload.wikimedia.org/wikipedia/commons/c/c7/Loading_2.gif",
-    //   imageHeight: 100,
-    //   showCloseButton: true,
-    //   showConfirmButton: false,
-    //   allowOutsideClick: false,
-    //   allowEscapeKey: false,
-    // });
 
+    // Show the loading spinner
     setSignUpSpinner(true);
+
     try {
+      // Prepare the form data
       const fd = new FormData();
       fd.append("FirstName", signUpDetails.firstName);
       fd.append("LastName", signUpDetails.lastName);
@@ -49,43 +54,77 @@ function SignUp() {
       fd.append("Email", signUpDetails.email);
       fd.append("Phone", signUpDetails.phoneNumber);
       fd.append("Password", signUpDetails.password);
-      const url = "https://studylodge-api.onrender.com/student/register";
+
+      // Define the API URL
+      const url = `${baseUrl}/student/register`;
+
+    // Send the request  
       const response = await axios.post(url, fd);
+
+      // Check response and notify user
       if (response.data.Error === false) {
-        setSignUpSpinner(false);
-        Notify({
-          title: "success",
-          message: "details sent successfully",
-          type: "success",
-        });
+        setMail(response.data.Email);
+        console.log(mail)
+
+        await handleSendOTP(response.data.Email);
       } else {
-        setSignUpSpinner(false);
         Notify({
-          title: "success",
-          message: `${response.data.Error}`,
+          title: "Error",
+          message: response.data.Error || "An unexpected error occurred",
           type: "danger",
         });
       }
     } catch (error) {
-      setSignUpSpinner(false)
+      // Handle errors
       const errorMessage =
-        error.response?.data?.Error || error.message || "An error occur";
+        error.response?.data?.Error || error.message || "An error occurred";
       Notify({
-        title: "success",
+        title: "Error",
         message: errorMessage,
         type: "danger",
       });
+    } finally {
+      // Hide the spinner
+      setSignUpSpinner(false);
     }
   };
-
-  const [showPassword, setShowPassword] = useState(false);
 
   const HandlePasswordShow = () => {
     setShowPassword(!showPassword);
   };
 
-  const [signUpModal, setSignUpModal] = useState(false);
-  const [signUpSpinner, setSignUpSpinner] = useState(false);
+  const handleSendOTP = async (email) => {
+   
+    console.log(email)
+    try {
+      const url = `${baseUrl}/student/register/sendOtp?email=${email}`;
+      const OTPResponse = await axios.get(url);
+      if (OTPResponse.data.Error === false) {
+        Notify({
+          title: "success",
+          message: "OTP sent successfully",
+          type: "success",
+        });
+        navigate("/Otp", { state:{email} });
+      } else {
+        Notify({
+          title: "Error",
+          message: response.data.Error || "An unexpected error occurred",
+          type: "danger",
+        });
+        navigate("/Login");
+      }
+    } catch (error) {
+      const errorMessage =
+        error.response?.data?.Error || error.message || "An error occurred";
+      Notify({
+        title: "Error",
+        message: errorMessage,
+        type: "danger",
+      });
+      navigate("/Login");
+    }
+  };
 
   return (
     <div className={SignUpStyles.parent_ramp}>
@@ -101,7 +140,7 @@ function SignUp() {
           </div>
           <fieldset>
             <legend>First Name</legend>
-            <input
+            <input className={SignUpStyles.to_upper}
               value={signUpDetails.firstName}
               name="firstName"
               onChange={handleOnchange}
@@ -110,7 +149,7 @@ function SignUp() {
           </fieldset>
           <fieldset>
             <legend>Last Name</legend>
-            <input
+            <input className={SignUpStyles.to_upper}
               value={signUpDetails.lastName}
               name="lastName"
               onChange={handleOnchange}
@@ -119,7 +158,7 @@ function SignUp() {
           </fieldset>
           <fieldset>
             <legend>Gender</legend>
-            <input
+            <input className={SignUpStyles.to_upper}
               value={signUpDetails.gender}
               name="gender"
               onChange={handleOnchange}
@@ -128,7 +167,7 @@ function SignUp() {
           </fieldset>
           <fieldset>
             <legend>Email</legend>
-            <input
+            <input className={SignUpStyles.to_lower}
               value={signUpDetails.email}
               name="email"
               onChange={handleOnchange}
@@ -137,7 +176,7 @@ function SignUp() {
           </fieldset>
           <fieldset>
             <legend>Phone</legend>
-            <input
+            <input className={SignUpStyles.to_lower}
               value={signUpDetails.phoneNumber}
               name="phoneNumber"
               onChange={handleOnchange}
@@ -147,7 +186,7 @@ function SignUp() {
 
           <fieldset>
             <legend>Password</legend>
-            <input
+            <input className={SignUpStyles.to_lower}
               value={signUpDetails.password}
               name="password"
               onChange={handleOnchange}
@@ -212,3 +251,8 @@ function SignUp() {
 }
 
 export default SignUp;
+
+
+
+
+

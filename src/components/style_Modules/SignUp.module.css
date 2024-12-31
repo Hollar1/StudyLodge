@@ -58,7 +58,7 @@ padding-top: 45px;
   margin-left: 10px;
 }
 
-.SignUp_form_section form fieldset input {
+.to_upper {
   border: none;
   outline: none;
   width: 95%;
@@ -68,6 +68,26 @@ padding-top: 45px;
   background-color: transparent;
   padding-bottom: 3px;
 }
+
+.to_lower {
+  border: none;
+  outline: none;
+  width: 95%;
+  padding-inline-start: 10px;
+  font-size: 18px;
+  text-transform: lowercase;
+  background-color: transparent;
+  padding-bottom: 3px;
+}
+
+
+
+
+.not_capital{
+  text-transform:none;
+}
+
+
 .SignUp_form_section div {
   margin: 10px auto;
   display: flex;

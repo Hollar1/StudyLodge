@@ -1,0 +1,53 @@
+.parent_ramp {
+  background-color: #e4f1f1;
+  /* padding: 0px 10px; */
+  font-size: 17px;
+}
+
+.header {
+  margin-top: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(189, 251, 251);
+  position: sticky;
+  top: 104px;
+  padding: 5px 0px;
+  margin-bottom: 20px;
+  color: #191970;
+}
+
+.Privacy_policy_div{
+    padding: 0% 10px;
+}
+.abc h4 {
+  margin-top: 20px;
+  margin-bottom: 3px;
+  color: #191970;
+text-align: center;
+}
+.abc p {
+
+  padding: 0% 10px;
+}
+.abc p ul {
+  padding: 10px 20px;
+}
+
+.contactUs {
+  padding-bottom: 30px;
+  margin-top: 20px;
+}
+.contactUs h4 {
+  text-align: center;
+  font-size: 18px;
+  color: #191970;
+}
+.contactUs p {
+  font-size: 17px;
+  margin-bottom: 5px;
+  padding: 0% 10px;
+}
+.contactUs div {
+  padding: 3px 20px;
+}
