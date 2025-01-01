@@ -1,12 +1,12 @@
 import React, { useState } from "react";
+import EnterNewPassStyles from "../components/style_Modules/EnterNewPassword.module.css"
 import NavBar from "./NavBar";
-import ForgotPasswordStyles from "../components/style_Modules/Forgot_password.module.css";
 import { useLocation, useNavigate } from "react-router-dom";
 import { baseUrl } from "./Config";
 import { Vortex } from "react-loader-spinner";
 import axios from "axios";
 import Notify from "./Notify";
-import LoginStyles from "./style_Modules/Login.module.css";
+
 
 function EnterNewPassword() {
   const [signUpSpinner, setSignUpSpinner] = useState(false);
@@ -60,9 +60,9 @@ function EnterNewPassword() {
 
   return (
     <div>
-      <div className={ForgotPasswordStyles.parent_ramp}>
+      <div className={EnterNewPassStyles.parent_ramp}>
         <NavBar />
-        <div className={ForgotPasswordStyles.forgotPassword_ramp}>
+        <div className={EnterNewPassStyles.forgotPassword_ramp}>
           <h3>New Password</h3>
           <p>Create New Password</p>
 
@@ -82,7 +82,7 @@ function EnterNewPassword() {
       </div>
 
       {signUpSpinner && (
-        <section className={LoginStyles.spinner}>
+        <section className={EnterNewPassStyles.spinner}>
           <div>Loading.....</div>{" "}
           <Vortex
             visible={true}

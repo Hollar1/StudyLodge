@@ -1,4 +1,4 @@
-.parent_ramp{
+.parent_ramp {
   background-color: rgb(241, 247, 251);
 }
 .display_parent_div {
@@ -28,9 +28,8 @@
   width: 100%;
 }
 
-.prefer{
+.prefer {
   margin-top: 20px;
-
 }
 .btn_div button {
   width: 220px;
@@ -49,7 +48,6 @@
   color: white;
   color: #191970;
   font-size: 22px;
-
 }
 
 .display p {
@@ -69,8 +67,7 @@
 }
 .trusted p {
   padding: 0px 10px;
-font-size: 16px;
-
+  font-size: 16px;
 }
 
 .our_services {
@@ -100,7 +97,7 @@ font-size: 16px;
   border-radius: 20px;
 }
 .our_services p {
-padding: 0% 10px;
+  padding: 0% 10px;
   font-size: 16px;
 }
 
@@ -238,9 +235,7 @@ padding: 0% 10px;
   border: solid 5px;
 }
 
-
-
-.whatsapp{
+.whatsapp {
   width: 33px;
   height: 33px;
   border-radius: 50%;
@@ -248,353 +243,335 @@ padding: 0% 10px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-left: 280px;
-z-index: 1;
+  left: 280px;
+  z-index: 1;
 }
 
-.whatsapp img{
+.whatsapp img {
   width: 100%;
   border-radius: 50%;
 }
 
-.customer_care_ramp{
-height:300px;
-background-image: url("../../assets/images/Customer_care_image.jpg");
-background-position: center;
-background-repeat: no-repeat;
-background-size: 100% 100%;
-color: white;
+.customer_care_ramp {
+  height: 300px;
+  background-image: url("../../assets/images/Customer_care_image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: white;
 }
 
-.customer_care_ramp h3{
+.customer_care_ramp h3 {
   text-align: center;
   font-size: 22px;
   padding-top: 15px;
 }
 
-.customer_care_ramp p{
-font-size: 19px;
-padding: 3px 10px;
- 
+.customer_care_ramp p {
+  font-size: 19px;
+  padding: 3px 10px;
 }
-.contact_ramp{
+.contact_ramp {
   background-color: rgba(0, 0, 0, 0.3);
   padding: 5px 0px;
 }
-.contact_ramp div{
-margin-top: 7px;
-margin-left: 10px;
-display: flex;
-align-items: center;
-gap: 10px;
-font-size: 18px;
-color:white;
-
+.contact_ramp div {
+  margin-top: 7px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  color: white;
 }
-.contact_ramp div span{
-
+.contact_ramp div span {
 }
-.contact_ramp div a{
-  color:white;
+.contact_ramp div a {
+  color: white;
   text-decoration-line: none;
 }
-.map_icon{
-  font-size:25px;
+.map_icon {
+  font-size: 25px;
 }
 
-
-
-
-
-
-.contact_ramp{
+.contact_ramp {
   display: flex;
   flex-direction: column;
 }
 
-/* MEDIUM SCREEN START HERE */
-
-@media screen and (min-width:375px) {
-  
-.whatsapp{
-  width: 33px;
-  height: 33px;
-  border-radius: 50%;
+.useMobileOnly_ramp {
+  width: 100%;
+  height: 100vh;
+  background-color: #d7e8f9;
   position: fixed;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-left: 335px;
-z-index: 1;
-}
-
-.whatsapp img{
-  width: 100%;
-  border-radius: 50%;
-}
-
-
-
-
-
-.online_video_background {
-  width: 100%;
-  height: 200px;
-  position: relative;
-}
-.online_video_background video {
-  width: 100%;
-  height: 100%;
-}
-
-.online_video_background div {
-  position: absolute;
-  width: 100%;
-  height: 100%;
   top: 0%;
   left: 0%;
-  color: white;
-}
-
-.online_video_background div h3 {
-  margin-top: 15px;
-  text-align: center;
-  font-size: 25px;
-}
-
-.online_video_background p {
-  font-size: 20px;
-  padding: 0px 20px;
-}
-
-.btn_span {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 10px;
 }
-.online_video_background div button {
-  width: 200px;
-  height: 35px;
-  margin: auto;
-  border: 30px;
-  font-size: 18px;
-  border-radius: 30px;
-  font-weight: bold;
+.useMobileOnly_ramp h1 {
+  text-align: center;
+  margin-top: 200px;
+  margin-bottom: 20px;
   color: #191970;
-  border: solid 5px;
+}
+.useMobileOnly_ramp p {
+  width: 90%;
+  margin: auto;
+  font-size: 25px;
+}
+.useMobileOnly_ramp h2 {
+  text-align: center;
+  margin-top: 30px;
+  color: red;
 }
 
+/* MEDIUM SCREEN START HERE */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.customer_care_ramp{
-  height:300px;
-  background-image: url("../../assets/images/Customer_care_image.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  color: white;
+@media screen and (min-width: 375px) {
+  .whatsapp {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    left: 335px;
+    z-index: 1;
   }
-  
-  .customer_care_ramp h3{
+
+  .whatsapp img {
+    width: 100%;
+    border-radius: 50%;
+  }
+
+  .online_video_background {
+    width: 100%;
+    height: 200px;
+    position: relative;
+  }
+  .online_video_background video {
+    width: 100%;
+    height: 100%;
+  }
+
+  .online_video_background div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    color: white;
+  }
+
+  .online_video_background div h3 {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 25px;
+  }
+
+  .online_video_background p {
+    font-size: 20px;
+    padding: 0px 20px;
+  }
+
+  .btn_span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .online_video_background div button {
+    width: 200px;
+    height: 35px;
+    margin: auto;
+    border: 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    font-weight: bold;
+    color: #191970;
+    border: solid 5px;
+  }
+
+  .customer_care_ramp {
+    height: 300px;
+    background-image: url("../../assets/images/Customer_care_image.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: white;
+  }
+
+  .customer_care_ramp h3 {
     text-align: center;
     font-size: 22px;
     padding-top: 25px;
   }
-  
-  .customer_care_ramp p{
-  font-size: 19px;
-  padding: 3px 15px;
-   
+
+  .customer_care_ramp p {
+    font-size: 19px;
+    padding: 3px 15px;
   }
-  .contact_ramp{
+  .contact_ramp {
     background-color: rgba(0, 0, 0, 0.3);
     padding: 5px 0px;
   }
-  .contact_ramp div{
-  margin-top: 7px;
-  margin-left: 10px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 18px;
-  color:white;
-  
+  .contact_ramp div {
+    margin-top: 7px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    color: white;
   }
-  .contact_ramp div span{
-  
+  .contact_ramp div span {
   }
-  .contact_ramp div a{
-    color:white;
+  .contact_ramp div a {
+    color: white;
     text-decoration-line: none;
   }
-  .map_icon{
-    font-size:25px;
+  .map_icon {
+    font-size: 25px;
   }
-  
-  
-  
-  
-  
-  
-  .contact_ramp{
+
+  .contact_ramp {
     display: flex;
     flex-direction: column;
   }
-  
-
-
 }
-
-
-
-
-
 
 /* LARGE SCREEN */
 
-@media screen and (min-width:425px) {
-  
-.whatsapp{
-  width: 33px;
-  height: 33px;
-  border-radius: 50%;
-  position: fixed;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-left: 386px;
-z-index: 1;
-}
-
-.whatsapp img{
-  width: 100%;
-  border-radius: 50%;
-}
-
-
-
-.online_video_background {
-  width: 100%;
-  height: 200px;
-  position: relative;
-}
-.online_video_background video {
-  width: 100%;
-  height: 100%;
-}
-
-.online_video_background div {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0%;
-  left: 0%;
-  color: white;
-}
-
-.online_video_background div h3 {
-  margin-top: 15px;
-  text-align: center;
-  font-size: 25px;
-}
-
-.online_video_background p {
-  font-size: 22px;
-  padding: 0px 40px;
-}
-
-.btn_span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
-}
-.online_video_background div button {
-  width: 200px;
-  height: 35px;
-  margin: auto;
-  border: 30px;
-  font-size: 18px;
-  border-radius: 30px;
-  font-weight: bold;
-  color: #191970;
-  border: solid 5px;
-}
-
-
-
-
-
-.customer_care_ramp{
-  height:300px;
-  background-image: url("../../assets/images/Customer_care_image.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  color: white;
+@media screen and (min-width: 425px) {
+  .whatsapp {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    left: 386px;
+    z-index: 1;
   }
-  
-  .customer_care_ramp h3{
+
+  .whatsapp img {
+    width: 100%;
+    border-radius: 50%;
+  }
+
+  .online_video_background {
+    width: 100%;
+    height: 200px;
+    position: relative;
+  }
+  .online_video_background video {
+    width: 100%;
+    height: 100%;
+  }
+
+  .online_video_background div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    color: white;
+  }
+
+  .online_video_background div h3 {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 25px;
+  }
+
+  .online_video_background p {
+    font-size: 22px;
+    padding: 0px 40px;
+  }
+
+  .btn_span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .online_video_background div button {
+    width: 200px;
+    height: 35px;
+    margin: auto;
+    border: 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    font-weight: bold;
+    color: #191970;
+    border: solid 5px;
+  }
+
+  .customer_care_ramp {
+    height: 300px;
+    background-image: url("../../assets/images/Customer_care_image.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: white;
+  }
+
+  .customer_care_ramp h3 {
     text-align: center;
     font-size: 22px;
     padding-top: 45px;
   }
-  
-  .customer_care_ramp p{
-  font-size: 19px;
-  padding: 3px 20px;
-   
+
+  .customer_care_ramp p {
+    font-size: 19px;
+    padding: 3px 20px;
   }
-  .contact_ramp{
+  .contact_ramp {
     background-color: rgba(0, 0, 0, 0.3);
     padding: 5px 0px;
   }
-  .contact_ramp div{
-  margin-top: 7px;
-  margin-left: 10px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 18px;
-  color:white;
-  
+  .contact_ramp div {
+    margin-top: 7px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    color: white;
   }
-  .contact_ramp div span{
-  
+  .contact_ramp div span {
   }
-  .contact_ramp div a{
-    color:white;
+  .contact_ramp div a {
+    color: white;
     text-decoration-line: none;
   }
-  .map_icon{
-    font-size:25px;
+  .map_icon {
+    font-size: 25px;
   }
-  
-  
-  
-  
-  
-  
-  .contact_ramp{
+
+  .contact_ramp {
     display: flex;
     flex-direction: column;
   }
-  
-
 }
+/* MOBILE ONLY MEDIA QUERY START HERE */
+@media screen and (min-width: 426px) {
+  .parent_ramp {
+    display: none;
+  }
+  .useMobileOnly_ramp {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .useMobileOnly_ramp {
+    display: none;
+  }
+}
+
+/* MOBILE ONLY MEDIA QUERY END HERE */

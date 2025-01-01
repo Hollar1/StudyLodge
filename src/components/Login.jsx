@@ -112,7 +112,7 @@ function Login() {
   };
 
   const [signUpModal, setSignUpModal] = useState(false);
-  const [signUpSpinner, setSignUpSpinner] = useState(false);
+  const [signUpSpinner, setSignUpSpinner] = useState(true);
 
   return (
     <div className={LoginStyles.parent_ramp}>
@@ -133,6 +133,7 @@ function Login() {
           <fieldset>
             <legend>Email</legend>
             <input
+            disabled ={signUpSpinner}
               value={longInState.email}
               name="email"
               onChange={handleOnchange}
@@ -143,6 +144,7 @@ function Login() {
           <fieldset>
             <legend>Password</legend>
             <input
+            disabled={signUpSpinner}
               value={longInState.password}
               name="password"
               onChange={handleOnchange}
@@ -165,14 +167,14 @@ function Login() {
 
           <div className={LoginStyles.remember_me_forgot_password}>
             <div>
-              <input type="radio" />
+              <input disabled={signUpSpinner} type="radio" />
               Remember Me
             </div>
             <div onClick={()=>{navigate("/ForgotPassword")}}>Forgot Password ?</div>
           </div>
 
           <div>
-            <button type="submit">Login</button>
+            <button disabled={signUpSpinner} type="submit">Login</button>
           </div>
         </form>
 

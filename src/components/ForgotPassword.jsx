@@ -64,6 +64,7 @@ function ForgotPassword() {
         </p>
         <form onSubmit={handleResetPassword}>
           <input
+          disabled={signUpSpinner}
             value={forgotPassword}
             onChange={(e) => setForgotPassword(e.target.value)}
             placeholder="Enter Your Email"
@@ -71,14 +72,14 @@ function ForgotPassword() {
           />
 
 <div>
-          <button type="submit">Submit</button>
+          <button disabled={signUpSpinner} type="submit">Submit</button>
         </div>
         </form>
       
       </div>
 
       {signUpSpinner && (
-        <section className={LoginStyles.spinner}>
+        <section className={ForgotPasswordStyles.spinner}>
           <div>Loading.....</div>{" "}
           <Vortex
             visible={true}

@@ -79,6 +79,7 @@ function ForgotPassword_OTP() {
 
               <div className={OtpStyles.otp_input}>
                 <input
+                disabled ={signUpSpinner}
                   maxLength="4"
                   placeholder="Enter OTP"
                   value={otpInput}
@@ -93,7 +94,7 @@ function ForgotPassword_OTP() {
               </div>
               <div className={OtpStyles.resend}>Resend</div>
               <div className={OtpStyles.otp_submit_btn_div}>
-                <button type="submit">Submit</button>
+                <button disabled={signUpSpinner} type="submit">Submit</button>
               </div>
             </div>
           </div>
