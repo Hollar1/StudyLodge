@@ -69,6 +69,7 @@ function Profile() {
             <tbody>
               <tr>
                 <td>agent fee</td>
+              
                 <td>
                   ₦15,000.00 <span className={ProfileStyles.price}>✅</span>
                 </td>
@@ -94,7 +95,7 @@ function Profile() {
                 <td className={ProfileStyles.rent_td}>
                   ₦470,000.00
                   {paidRent ? (
-                    <span className={ProfileStyles.price}>✅</span>
+                    <span className={ProfileStyles.paid_icon}>✅</span>
                   ) : (
                    
                       <div className={ProfileStyles.notPay_icon}> <FaSquareXmark/></div>

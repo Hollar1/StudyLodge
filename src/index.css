@@ -10,3 +10,51 @@ html, body{
    scroll-behavior: smooth;
   
 }
+
+
+/* Styling the next button */
+.slick-next {
+    right: 10px; /* Adjust position */
+    background-color: blue;
+    color: white;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    z-index: 1000; /* Ensure it's on top */
+  }
+  
+  .slick-next:before {
+    content: "→"; /* Custom arrow */
+    font-size: 20px;
+    color: white;
+  }
+  
+  /* Styling the previous button */
+  .slick-prev {
+    left: 10px; /* Adjust position */
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    z-index: 1000; /* Ensure it's on top */
+  }
+  
+  .slick-prev:before {
+    content: "←"; /* Custom arrow */
+    font-size: 20px;
+    color: white;
+  }
+  
+  /* Optional: Adjust the dots */
+  .slick-dots li button:before {
+    color: gray; /* Default dot color */
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: black; /* Active dot color */
+  }
+
+
+
+ 

@@ -79,7 +79,7 @@ function Reviews() {
             </fieldset>
           </section>
 
-          <div>
+          <div className={ReviewStyles.stars}>
             <RatingStars rating={rating} onChange={handleRatingChange} />
           </div>
         <div className={ReviewStyles.btn_div}><button>Submit Review</button></div>

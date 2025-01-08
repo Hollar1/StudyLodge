@@ -1,7 +1,3 @@
-
-
-
-
 import React, { useState } from "react";
 import SignUpStyles from "../components/style_Modules/SignUp.module.css";
 import new_logo_001 from "../assets/images/new_logo_001.png";
@@ -64,7 +60,7 @@ function SignUp() {
       // Check response and notify user
       if (response.data.Error === false) {
         setMail(response.data.Email);
-        console.log(mail)
+      
 
         await handleSendOTP(response.data.Email);
       } else {
@@ -95,7 +91,7 @@ function SignUp() {
 
   const handleSendOTP = async (email) => {
    
-    console.log(email)
+  
     try {
       const url = `${baseUrl}/student/register/sendOtp?email=${email}`;
       const OTPResponse = await axios.get(url);

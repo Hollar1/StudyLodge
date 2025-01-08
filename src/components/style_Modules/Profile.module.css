@@ -18,7 +18,7 @@
 }
 
 .user_details_ramp {
-  width: 300px;
+  width: 365px;
   height: auto;
   margin: auto;
   border-radius: 10px;
@@ -89,34 +89,46 @@ fieldset img {
 }
 
 .payment_ramp {
-  font-size: 16px;
+ 
   text-transform: capitalize;
   margin-top: 40px;
 }
+
+.payment_ramp td{
+  border: solid;
+}
+
+
+
+
 .payment_ramp legend {
   margin: auto;
+  font-size: 18px;
 }
 .payment_ramp fieldset table {
   width: 100%;
   border-collapse: collapse;
+  margin-top: 10px;  
 }
-.payment_ramp fieldset table,
-tr,
-td {
-  border: solid;
-  border-color: rgb(209, 206, 206);
-  padding: 3px 0px;
+
+
+.payment_ramp fieldset td{
+  font-size: 16px;
 }
+
+
 
 .price {
   float: right;
   margin-right: 3px;
-  font-size: 15px;
+  font-size: 12px;
+  margin-top: 3px;
+
 }
+
 .price_rent {
   float: right;
   margin-right: 3px;
-  font-size: 15px;
 }
 .payment_status {
   width: 92px;
@@ -135,7 +147,7 @@ td {
 .notPay_icon {
   color: red;
   margin-top: 4px;
-  font-size: 18px;
+  font-size: 16px;
 }
 .not_pay div {
   color: white;
@@ -143,9 +155,10 @@ td {
 .rent_td {
   display: flex;
   justify-content: space-between;
-  border: none;
+
   align-items: center;
   height: 35px;
+
 }
 .pay_status {
   text-align: center;
@@ -158,7 +171,7 @@ td {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border: 2px solid;
-  /* padding-bottom: 10px; */
+ font-size: 16px;
   display: flex;
   flex-direction: column;
 }

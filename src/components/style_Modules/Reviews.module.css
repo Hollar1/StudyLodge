@@ -4,133 +4,124 @@
   /* height: 100vh; */
 }
 
-
-
-
-.select_star_div{
-    gap: 5px;
-    display: flex;
-    font-size: 30px;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
+.select_star_div {
+  gap: 5px;
+  display: flex;
+  font-size: 30px;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
 }
 
-
-
-.reviewer_name_section fieldset{
-border: solid;
-border-color: #191970;
-margin: 10px ;
+.reviewer_name_section fieldset {
+  border: solid;
+  border-color: #191970;
+  margin: 10px;
 }
-.reviewer_name_section legend{
-margin-left: 20px;
-font-size: 20px;
+.reviewer_name_section legend {
+  margin-left: 20px;
+  font-size: 20px;
 }
-.reviewer_name_section input{
-    width: 100%;
-    height: 30px;
-    border: none;
-    outline: none;
-    background-color: transparent;
-    padding-inline-start: 10px;
-    text-transform: capitalize;
-    font-size: 18px;
+.reviewer_name_section input {
+  width: 100%;
+  height: 30px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding-inline-start: 10px;
+  text-transform: capitalize;
+  font-size: 18px;
 }
 
-
-.write_review_box_section fieldset{
-    border: solid;
-    border-color: #191970;
-    margin: 10px ;
+.write_review_box_section fieldset {
+  border: solid;
+  border-color: #191970;
+  margin: 10px;
 }
-.write_review_box_section fieldset legend{
-    margin-left: 20px;
-    font-size: 20px;
-}
-
-.write_review_box_section textarea{
-    width: 100%;
- 
-    border: none;
-    outline: none;
-    background-color: transparent;
-    height: 90px;
-    padding: 10px;
-    font-size: 15px;
+.write_review_box_section fieldset legend {
+  margin-left: 20px;
+  font-size: 20px;
 }
 
+.write_review_box_section textarea {
+  width: 100%;
 
-.all_review_section{
-    padding: 10px;
-
-   
-  
-}
-.reviewer_names{
-    margin-top: 20px;
-    color: #191970;
-    font-weight: bold;
-    font-style: italic;
-    margin-bottom: 3px;
-    font-size: 18px;
-    display: flex;
-    justify-content: space-between;
-} 
-
-.star_div{
-    gap: 5px;
-    display: flex;
-}
-.name_star{
-    display: flex;
-    align-items: center;
-    margin-top: 30px;
-   justify-content: space-between;
-}
-.name_star div{
-
-    color: #191970;
-    font-weight: bold;
-    font-style: italic;
-    font-size: 18px;
-    display: flex;
-    text-transform: capitalize;
-}
-.p{
-    word-wrap: break-word;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  height: 90px;
+  padding: 10px;
+  font-size: 15px;
 }
 
-.leave_comment{
-    text-align: center;
-   padding-top: 40px;
-
-
+.all_review_section {
+  padding: 10px;
 }
-
-.header{
-    text-align: center;
+.reviewer_names {
   margin-top: 20px;
-    background-color: #191970;
-    color: white;
-    padding: 5px 0px;
-  
+  color: #191970;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 3px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+.stars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
 
+.star_div {
+  gap: 10px;
+  display: flex;
 }
-.btn_div{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
+.name_star {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  justify-content: space-between;
 }
-.btn_div button{
-    width: 190px;
-    font-size: 18px;
-    border-radius: 10px;
-    background-color: #e4f1f1;
-    color: #191970;
-    font-weight: bold;
-    border: 3px solid #1e90ff;
-    padding: 5px;
+.name_star div {
+  color: #191970;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 18px;
+  display: flex;
+  text-transform: capitalize;
+}
+.p {
+  word-wrap: break-word;
+}
+
+.leave_comment {
+  text-align: center;
+  padding-top: 40px;
+}
+
+.header {
+  text-align: center;
+  margin-top: 20px;
+  background-color: #191970;
+  color: white;
+  padding: 5px 0px;
+}
+.btn_div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+.btn_div button {
+  width: 190px;
+  font-size: 18px;
+  border-radius: 10px;
+  background-color: #e4f1f1;
+  color: #191970;
+  font-weight: bold;
+  border: 3px solid #1e90ff;
+  padding: 5px;
 }

@@ -25,6 +25,8 @@ import Admin_Home from "./components/adminBoard/Admin_Home";
 import ForgotPassword_OTP from "./components/ForgotPassword_OTP";
 import EnterNewPassword from "./components/EnterNewPassword";
 import HomeStyles from "./components/style_Modules/Home.module.css";
+import CreateHostel from "./components/adminBoard/CreateHostel";
+import Inspection from "./components/adminBoard/Inspection";
 
 // Scroll restoration component
 function ScrollToTop() {
@@ -77,6 +79,20 @@ function App() {
         </p>
         <h2>PLEASE USE MOBILE DEVICE TO ACCESS THIS SITE !</h2>
       </div>
+
+
+
+     <Router>
+      <Routes>
+      <Route path="/AdminHome" element={<Admin_Home />} />
+      <Route path="/CreateHostel" element={<CreateHostel/>} />
+      <Route path="/Inspection" element={<Inspection/>} />
+
+      </Routes>
+     </Router>
+
+
+
     </div>
   );
 }

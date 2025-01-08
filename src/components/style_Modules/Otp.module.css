@@ -121,3 +121,10 @@
   padding-inline-start: 20px;
   font-weight: bold;
 }
+
+
+.ban_message{
+  color:red;
+  margin-top: 10px;
+  text-align: center;
+}

@@ -46,7 +46,7 @@ function Admin_Home() {
         </div>
       </div>
       <section className={AdminHomeStyles.tenant_table_section}>
-        {search}
+       
 
         <table>
           <thead>
@@ -143,6 +143,176 @@ function Admin_Home() {
             </tr>
             <tr>
               <td>Olamide Tijani</td>
+              <td>Scholar's Hostel</td>
+              <td>Room 08</td>
+              <td>Male</td>
+              <td>15 days</td>
+              <td className={AdminHomeStyles.profile_btn_div}>
+                <button className={AdminHomeStyles.profile_btn}>Profile</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Olamide Tijani</td>
+              <td>Scholar's Hostel</td>
+              <td>Room 08</td>
+              <td>Male</td>
+              <td>15 days</td>
+              <td className={AdminHomeStyles.profile_btn_div}>
+                <button className={AdminHomeStyles.profile_btn}>Profile</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Olamide Tijani</td>
+              <td>Scholar's Hostel</td>
+              <td>Room 08</td>
+              <td>Male</td>
+              <td>15 days</td>
+              <td className={AdminHomeStyles.profile_btn_div}>
+                <button className={AdminHomeStyles.profile_btn}>Profile</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Olamide Tijani</td>
+              <td>Scholar's Hostel</td>
+              <td>Room 08</td>
+              <td>Male</td>
+              <td>15 days</td>
+              <td className={AdminHomeStyles.profile_btn_div}>
+                <button className={AdminHomeStyles.profile_btn}>Profile</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Olamide Tijani</td>
+              <td>Scholar's Hostel</td>
+              <td>Room 08</td>
+              <td>Male</td>
+              <td>15 days</td>
+              <td className={AdminHomeStyles.profile_btn_div}>
+                <button className={AdminHomeStyles.profile_btn}>Profile</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Olamide Tijani</td>
+              <td>Scholar's Hostel</td>
+              <td>Room 08</td>
+              <td>Male</td>
+              <td>15 days</td>
+              <td className={AdminHomeStyles.profile_btn_div}>
+                <button className={AdminHomeStyles.profile_btn}>Profile</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Olamide Tijani</td>
+              <td>Scholar's Hostel</td>
+              <td>Room 08</td>
+              <td>Male</td>
+              <td>15 days</td>
+              <td className={AdminHomeStyles.profile_btn_div}>
+                <button className={AdminHomeStyles.profile_btn}>Profile</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Olamide Tijani</td>
+              <td>Scholar's Hostel</td>
+              <td>Room 08</td>
+              <td>Male</td>
+              <td>15 days</td>
+              <td className={AdminHomeStyles.profile_btn_div}>
+                <button className={AdminHomeStyles.profile_btn}>Profile</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Olamide Tijani</td>
+              <td>Scholar's Hostel</td>
+              <td>Room 08</td>
+              <td>Male</td>
+              <td>15 days</td>
+              <td className={AdminHomeStyles.profile_btn_div}>
+                <button className={AdminHomeStyles.profile_btn}>Profile</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Olamide Tijani</td>
+              <td>Scholar's Hostel</td>
+              <td>Room 08</td>
+              <td>Male</td>
+              <td>15 days</td>
+              <td className={AdminHomeStyles.profile_btn_div}>
+                <button className={AdminHomeStyles.profile_btn}>Profile</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Olamide Tijani</td>
+              <td>Scholar's Hostel</td>
+              <td>Room 08</td>
+              <td>Male</td>
+              <td>15 days</td>
+              <td className={AdminHomeStyles.profile_btn_div}>
+                <button className={AdminHomeStyles.profile_btn}>Profile</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Olamide Tijani</td>
+              <td>Scholar's Hostel</td>
+              <td>Room 08</td>
+              <td>Male</td>
+              <td>15 days</td>
+              <td className={AdminHomeStyles.profile_btn_div}>
+                <button className={AdminHomeStyles.profile_btn}>Profile</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Olamide Tijani</td>
+              <td>Scholar's Hostel</td>
+              <td>Room 08</td>
+              <td>Male</td>
+              <td>15 days</td>
+              <td className={AdminHomeStyles.profile_btn_div}>
+                <button className={AdminHomeStyles.profile_btn}>Profile</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Olamide Tijani</td>
+              <td>Scholar's Hostel</td>
+              <td>Room 08</td>
+              <td>Male</td>
+              <td>15 days</td>
+              <td className={AdminHomeStyles.profile_btn_div}>
+                <button className={AdminHomeStyles.profile_btn}>Profile</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Olamide Tijani</td>
+              <td>Scholar's Hostel</td>
+              <td>Room 08</td>
+              <td>Male</td>
+              <td>15 days</td>
+              <td className={AdminHomeStyles.profile_btn_div}>
+                <button className={AdminHomeStyles.profile_btn}>Profile</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Olamide Tijani</td>
+              <td>Scholar's Hostel</td>
+              <td>Room 08</td>
+              <td>Male</td>
+              <td>15 days</td>
+              <td className={AdminHomeStyles.profile_btn_div}>
+                <button className={AdminHomeStyles.profile_btn}>Profile</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Olamide Tijani</td>
+              <td>Scholar's Hostel</td>
+              <td>Room 08</td>
+              <td>Male</td>
+              <td>15 days</td>
+              <td className={AdminHomeStyles.profile_btn_div}>
+                <button className={AdminHomeStyles.profile_btn}>Profile</button>
+              </td>
+            </tr>
+            <tr>
+              <td>lola idije Tijani</td>
               <td>Scholar's Hostel</td>
               <td>Room 08</td>
               <td>Male</td>

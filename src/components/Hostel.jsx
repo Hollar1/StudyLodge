@@ -169,12 +169,7 @@ function Hostel() {
 
           <div className={HostelStyles.rooms_ramp_div}>
             <table>
-              <thead>
-                <tr>
-                  <th>Status</th>
-                  <th>Rooms</th>
-                </tr>
-              </thead>
+            
 
               <tbody>
                 <tr>

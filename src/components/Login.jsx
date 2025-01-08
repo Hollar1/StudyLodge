@@ -112,7 +112,7 @@ function Login() {
   };
 
   const [signUpModal, setSignUpModal] = useState(false);
-  const [signUpSpinner, setSignUpSpinner] = useState(true);
+  const [signUpSpinner, setSignUpSpinner] = useState(false);
 
   return (
     <div className={LoginStyles.parent_ramp}>
@@ -133,6 +133,7 @@ function Login() {
           <fieldset>
             <legend>Email</legend>
             <input
+            // autoComplete="off"
             disabled ={signUpSpinner}
               value={longInState.email}
               name="email"

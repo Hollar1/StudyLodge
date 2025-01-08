@@ -15,7 +15,7 @@
   height: 230px;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
-  background-image: url("../../assets/images/3d3-1.png");
+  background-image: url("../../assets/images/3d.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
@@ -42,7 +42,7 @@
   padding: 5px;
 }
 .display h3 {
-  margin-top: 25px;
+  margin-top: 35px;
   font-weight: bold;
   margin-bottom: 20px;
   color: white;
@@ -80,6 +80,7 @@
 .our_services h3 {
   text-align: center;
   color: #191970;
+  /* color: white; */
   padding: 10px 0px;
 }
 .our_services div {
@@ -88,7 +89,17 @@
   border-radius: 20px;
   background-color: rgb(237, 239, 240);
   background-color: rgb(204, 201, 201);
+  background-color: #191970;
   margin-top: 15px;
+}
+.our_services_div h4{
+  color: white;
+  margin: 20px 0px;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+.top_writeUp{
+  color: white;
 }
 
 .our_services_div img {
@@ -99,6 +110,7 @@
 .our_services p {
   padding: 0% 10px;
   font-size: 16px;
+  /* color: white; */
 }
 
 .why_chooseUs {
@@ -326,6 +338,9 @@
   margin-top: 30px;
   color: red;
 }
+
+
+
 
 /* MEDIUM SCREEN START HERE */
 

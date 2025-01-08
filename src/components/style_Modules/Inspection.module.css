@@ -1,0 +1,172 @@
+.parent_ramp {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  z-index: 900;
+  background-color: aliceblue;
+}
+.parent_ramp h2 {
+  text-align: center;
+  top: 0%;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  background-color: #d7e8f9;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.tenant_table_section {
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+table,
+td,
+tr,
+thead {
+  border: solid;
+}
+table {
+  width: 99%;
+  margin: auto;
+  border: solid;
+  padding-top: 20px;
+  border-collapse: collapse;
+
+  z-index: 100;
+  position: sticky;
+  background-color: white;
+}
+th {
+  border: solid;
+  font-size: 22px;
+  padding: 10px 0px;
+  background-color: azure;
+  padding-top: 20px;
+}
+
+td {
+  font-size: 21px;
+  padding-inline-start: 10px;
+}
+td span {
+  margin-left: 30px;
+}
+.profile_btn_div {
+  width: 120px;
+}
+.profile_btn {
+  width: 120px;
+  height: 25px;
+  background-color: #e4f1f1;
+  color: #191970;
+  font-weight: bold;
+  border: 2px solid #1e90ff;
+  font-size: 18px;
+}
+.profile_btn:hover {
+  background-color: #3b3be3;
+  color: white;
+  cursor: pointer;
+}
+
+tr:nth-child(odd) {
+  background-color: rgb(232, 237, 237);
+}
+
+.radio {
+  transform: scale(1.5);
+  appearance: none;
+  height: 13px;
+  width: 13px;
+  border: 1.5px solid;
+  border-radius: 50%;
+  background-color: red;
+  float: right;
+  margin-top: 6px;
+  margin-right: 6px;
+  transition: 1s;
+}
+
+.radio:hover {
+  background-color: rgb(235, 148, 148);
+  cursor: pointer;
+  transform: scale(1.9);
+}
+
+.radio:checked {
+  transform: scale(1.5);
+  appearance: none;
+  height: 13px;
+  width: 13px;
+  border: 1.5px solid;
+  border-radius: 50%;
+  background-color: blue;
+  float: right;
+  margin-top: 6px;
+  margin-right: 6px;
+}
+.warning {
+  width: 520px;
+  height: 90px;
+  background-color: rgb(177, 177, 4);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 64%;
+  left: 52.5%;
+  translate: -50% -50%;
+  z-index: 1000;
+  font-size: 25px;
+}
+
+.yes_no_div {
+  display: flex;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.yes_btn {
+  width: 90px;
+  padding: 5px 0px;
+
+  background-color: #3b3be3;
+  color: white;
+  font-size: 20px;
+}
+.yes_btn:hover {
+  cursor: pointer;
+  background-color: #191970;
+}
+
+.no_btn {
+  color: white;
+  width: 90px;
+  padding: 5px 0px;
+  font-size: 20px;
+  background-color: brown;
+}
+.no_btn:hover {
+  cursor: pointer;
+  background-color: brown;
+  background-color: rgb(236, 82, 82);
+}
+
+.paid_Rent {
+  background-color: green;
+  padding: 0px 10px;
+  border-radius: 20px;
+  color: white;
+}
+.rent_waiting {
+  background-color: rgb(158, 158, 38);
+  padding: 0px 10px;
+  border-radius: 20px;
+  color: white;
+}

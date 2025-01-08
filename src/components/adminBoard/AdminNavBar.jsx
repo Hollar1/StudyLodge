@@ -16,6 +16,7 @@ function AdminNavBar() {
   const [openSideBar, setOpenSideBar] = useState(false);
   const [openHostel, setOpenHostel] = useState(false);
   const [search, setSearch] = useState("");
+ 
 
   const navigate = useNavigate();
   const handleOpenSideBar = () => {
@@ -58,7 +59,7 @@ function AdminNavBar() {
           </div>
         )}
 
-        <div>Inspection(3)</div>
+        <div onClick={()=>{navigate("/Inspection")}}>Inspection(3)</div>
         <div
           onClick={() => {
             navigate("/AdminHome");
@@ -69,12 +70,12 @@ function AdminNavBar() {
       </nav>
       {openSideBar && (
         <nav className={AdminHomeStyles.sideBar}>
-          <div className={AdminHomeStyles.add_icon}>
-            <div className={AdminHomeStyles.house_icon}>
+          <div onClick={()=>{navigate("/CreateHostel")}} className={AdminHomeStyles.add_icon}>
+            <div  className={AdminHomeStyles.house_icon}>
               {" "}
               <FaHouseChimney />
             </div>
-            <p>Create Hostel</p>
+            <p >Create Hostel</p>
           </div>
 
           <div className={AdminHomeStyles.add_icon}>
@@ -100,6 +101,27 @@ function AdminNavBar() {
             </div>
             <p>Send SMS</p>
           </div>
+          
+          <div className={AdminHomeStyles.add_icon}>
+            <div className={AdminHomeStyles.house_icon}>
+              {" "}
+              <FaComment />
+            </div>
+            <p>Job Vacancies</p>
+          </div>
+
+
+          <div className={AdminHomeStyles.add_icon}>
+            <div className={AdminHomeStyles.house_icon}>
+              {" "}
+              <FaComment />
+            </div>
+            <p>Staffs</p>
+          </div>
+
+
+
+
         </nav>
       )}
 
@@ -110,6 +132,8 @@ function AdminNavBar() {
           <div>Unique Hostel</div>
         </div>
       )}
+
+
     </div>
   );
 }

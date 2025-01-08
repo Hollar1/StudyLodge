@@ -6,7 +6,7 @@ import Footer from "./Footer";
 import Whatsapp_logo from "../assets/images/Whatsapp_logo.png";
 import House_image from "../assets/images/House.png";
 import House_image_001 from "../assets/images/3d3-1.png";
-import UseMobileOnly from "./UseMobileOnly";
+
 import {
   FaHandHoldingDollar,
   FaHandshake,
@@ -37,6 +37,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carousel styles
 import { Carousel } from "react-responsive-carousel";
+import '/custom-carousel.css';
 
 function Home() {
   const settings = {
@@ -45,7 +46,7 @@ function Home() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
     arrow: true,
     pauseOnOHover: true,
     pauseOnFocus: true,
@@ -71,6 +72,7 @@ function Home() {
               autoFocus={false}
               interval={3000}
               showIndicators={true}
+              showThumbs={false}
             >
               <div className={HomeStyles.display}>
                 <h3>Home Away Home For Students</h3>
@@ -195,16 +197,18 @@ function Home() {
 
           <Carousel
             showArrows
-            //  autoPlay
+             autoPlay={false}
             infiniteLoop={true}
             autoFocus={false}
             interval={4000}
             showIndicators={false}
+            showThumbs={false}
+          
           >
             <div className={HomeStyles.our_services_div}>
               <img src={Single_bed_room} alt="" />
-              <h3 className={HomeStyles.header}>Studios:</h3>
-              <p>
+              <h4 className={HomeStyles.header}>Studios:</h4>
+              <p   className={HomeStyles.top_writeUp}>
                 Our studio apartments are fully self-contained units, ideal for
                 students who value privacy and independence. Each studio comes
                 with its own private kitchen and bathroom, allowing you to enjoy
@@ -215,8 +219,8 @@ function Home() {
 
             <div className={HomeStyles.our_services_div}>
               <img src={Studio_room} alt="" />
-              <h3 className={HomeStyles.header}>En-suite Rooms:</h3>
-              <p>
+              <h4 className={HomeStyles.header}>En-suite Rooms:</h4>
+              <p className={HomeStyles.top_writeUp}>
                 En-suite rooms offer a private bedroom and a personal bathroom,
                 giving you the privacy you need while being part of a community.
                 These rooms are part of a shared living setup, where common
@@ -228,8 +232,8 @@ function Home() {
 
             <div className={HomeStyles.our_services_div}>
               <img src={double_bed_room} alt="" />
-              <h3 className={HomeStyles.header}>Shared Flats:</h3>
-              <p>
+              <h4 className={HomeStyles.header}>Shared Flats:</h4>
+              <p className={HomeStyles.top_writeUp}>
                 Shared flats feature multiple bedrooms within a single
                 apartment, with shared facilities such as kitchens and living
                 rooms. This is an excellent choice for students who enjoy living
@@ -241,8 +245,8 @@ function Home() {
 
             <div className={HomeStyles.our_services_div}>
               <img src={Furnished_room} alt="" />
-              <h3 className={HomeStyles.header}>Furnished Rooms:</h3>
-              <p>
+              <h4 className={HomeStyles.header}>Furnished Rooms:</h4>
+              <p className={HomeStyles.top_writeUp}>
                 All our accommodation options come with furnished rooms,
                 ensuring you have everything you need from day one. Each room is
                 equipped with essentials like a bed, desk, chair, and ample
