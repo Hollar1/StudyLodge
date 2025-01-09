@@ -28,6 +28,7 @@ function Admin_Home() {
 
         <div className={AdminHomeStyles.search_div}>
           <input
+          placeholder="Enter client's name"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             type="text"
@@ -38,7 +39,7 @@ function Admin_Home() {
                 setSearch("");
               }}
             >
-              <FaXmark />
+              <FaXmark className={AdminHomeStyles.close_icon} />
             </div>
           ) : (
             ""

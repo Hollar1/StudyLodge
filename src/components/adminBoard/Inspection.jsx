@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import InspectionStyles from "../style_Modules/Inspection.module.css";
-import { FaCircle } from "react-icons/fa6";
+import { FaCircle, FaXmark } from "react-icons/fa6";
 
 function Inspection() {
   const [showWarning, setShowWarning] = useState(false);
   const [isConfirmed, setIsConfirmed] = useState(false);
-  const [paidRent, setPayRent] = useState(false);
+  const [paidRent, setPayRent] = useState(true);
+  const [search, setSearch] = useState("");
+  const [paymentConfirm,setPaymentConfirm]=useState(false)
 
   const handleRadioClick = (event) => {
     event.preventDefault();
@@ -15,8 +17,11 @@ function Inspection() {
   const proceedPayment = () => {
     setShowWarning(false);
     setIsConfirmed(true);
-    alert("Payment Confirmed!");
-    // Add form submission or other actions here
+    setPaymentConfirm(true)
+    setTimeout(()=>{
+      setPaymentConfirm(false)
+    },2500)
+   
   };
 
   const cancelPayment = () => {
@@ -24,13 +29,25 @@ function Inspection() {
     setIsConfirmed(false);
   };
 
-  const handleConfirmAgentFeePayment = () => {
-    setConfirmAgentFeeModal(true);
-  };
+
 
   return (
     <div className={InspectionStyles.parent_ramp}>
-      <h2>Inspection History</h2>
+      <div className={InspectionStyles.header_search}>
+        {" "}
+        <h4>Inspection History</h4>{" "}
+       <div className={InspectionStyles.search_div}>
+         <input
+         placeholder="Enter client's name"
+          type="text"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+     {search?<FaXmark className={InspectionStyles.close_icon} onClick={()=>{setSearch("")}}/>:""}
+        </div>
+      
+      </div>
+
       <section className={InspectionStyles.tenant_table_section}>
         <table>
           <thead>
@@ -62,9 +79,9 @@ function Inspection() {
                   onChange={handleRadioClick}
                 />
               </td>
-              <td>
+              <td className={InspectionStyles.rent_price_td}>
                 {" "}
-                ₦470,000{" "}
+                ₦470,000.00{" "}
                 {paidRent ? (
                   <span className={InspectionStyles.paid_Rent}>Paid</span>
                 ) : (
@@ -83,7 +100,7 @@ function Inspection() {
 
       {showWarning && (
         <div className={InspectionStyles.warning}>
-          <div> Are you sure you want to confirm the payment ?</div>
+          <div> Are you sure you want to confirm this payment ?</div>
 
           <div className={InspectionStyles.yes_no_div}>
             <button
@@ -98,6 +115,15 @@ function Inspection() {
           </div>
         </div>
       )}
+
+
+
+
+{paymentConfirm&&<div className={InspectionStyles.paymentConfirm_modal}>
+Payment Confirmed <div className={InspectionStyles.thumb}>👍🏾</div>
+</div>}
+
+
     </div>
   );
 }

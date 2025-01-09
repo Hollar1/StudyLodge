@@ -8,16 +8,19 @@ import NavBar from "./NavBar";
 
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { useNavigate } from "react-router-dom";
 
 function Payment() {
   const [expiryDate, setExpiryDate] = useState(null);
 
   const [paymentModal, setPaymentModal] = useState(false);
 
+  const navigate = useNavigate()
+
   return (
     <div className={PaymentStyles.parent_ramp}>
       {/* <NavBar /> */}
-      <section className={PaymentStyles.logo_section}>
+      <section onClick={()=>{navigate("/")}} className={PaymentStyles.logo_section}>
         <img src={new_logo_001} alt="" />
       </section>
 

@@ -66,12 +66,12 @@ function Home() {
         <div className={HomeStyles.display_parent_div}>
           <div className={HomeStyles.display_ramp}>
             <Carousel
-              showArrows
+              showArrows={false}
               autoPlay
               infiniteLoop={true}
               autoFocus={false}
               interval={3000}
-              showIndicators={true}
+              showIndicators={false}
               showThumbs={false}
             >
               <div className={HomeStyles.display}>
@@ -116,65 +116,7 @@ function Home() {
         <section className={HomeStyles.trusted}>
           <h3>We are trusted partner in quality student accommodation! </h3>
 
-          <div>
-            <button
-              onClick={() => {
-                navigate("/ForgotPassword");
-              }}
-            >
-              GO TO FORGOT PASSWORD PAGE
-            </button>
-          </div>
-
-          <div>
-            <button
-              onClick={() => {
-                navigate("/otp");
-              }}
-            >
-              OTP PAGE
-            </button>
-          </div>
-
-          <div>
-            <button
-              onClick={() => {
-                navigate("/Reviews");
-              }}
-            >
-              REVIEWS PAGE
-            </button>
-          </div>
-          <div>
-            <button
-              onClick={() => {
-                navigate("/Login");
-              }}
-            >
-              LOGIN PAGE
-            </button>
-          </div>
-
-          <div>
-            <button
-              onClick={() => {
-                navigate("/AdminHome");
-              }}
-            >
-              ADMIN HOME PAGE
-            </button>
-          </div>
-
-          <div>
-            <button
-              onClick={() => {
-                navigate("/EnterNewPassword");
-              }}
-            >
-              ENTER NEW PASSWORD SCREEN
-            </button>
-          </div>
-
+         
           <p>
             StudyLodge, we take pride in offering a wide range of comfortable,
             secure, and contemporary housing solutions carefully designed to

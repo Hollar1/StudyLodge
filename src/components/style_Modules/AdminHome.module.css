@@ -16,10 +16,10 @@
 }
 
 .top_nav div:hover {
-    border-bottom:2px solid;
-    border-color: #3b3be3;
+  border-bottom: 2px solid;
+  border-color: #3b3be3;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .faBars {
@@ -46,14 +46,13 @@
   background-color: azure;
 }
 
-.add_icon:hover{
+.add_icon:hover {
   background-color: rgb(225, 223, 223);
   cursor: pointer;
-
 }
 
 .house_icon {
-  font-size:20px;
+  font-size: 20px;
 }
 
 .add_icon p {
@@ -65,33 +64,28 @@
 
 .close_sideBar {
   color: brown;
+  margin-top: 10px;
 }
 
+.close_sideBarA {
+  color: brown;
+  font-size: 30px;
+  margin-top: 10px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.close_sideBarA:hover,
+.close_sideBar:hover {
+  color: rgb(246, 3, 3);
+  font-size: 30px;
+}
 
 .header_search {
   margin-top: 50px;
   position: fixed;
   top: 1.8%;
   width: 100%;
-  background-color:white;
-  z-index:900;
+  background-color: white;
+  z-index: 900;
 
   /* background-color: white; */
   padding-bottom: 20px;
@@ -133,8 +127,7 @@
 
 .tenant_table_section {
   margin-top: 205px;
-margin-bottom: 30px;
-
+  margin-bottom: 30px;
 }
 
 table {
@@ -157,9 +150,8 @@ th {
 }
 
 td {
-   
   font-size: 21px;
-padding-inline-start: 10px;
+  padding-inline-start: 10px;
 }
 .profile_btn_div {
   width: 120px;
@@ -179,27 +171,28 @@ padding-inline-start: 10px;
   cursor: pointer;
 }
 
-tr:nth-child(odd){
-    background-color: rgb(232, 237, 237);
+tr:nth-child(odd) {
+  background-color: rgb(232, 237, 237);
 }
 
-
-
-
-.hostels_div_ramp{
-    top: 7.9%;
-    left: 22%;
-    width: 300px;
-    height: auto;
-    padding: 15px 0px;
-    background-color: beige;
-    border: solid;
-    position: fixed;
-    z-index: 1000;
+.hostels_div_ramp {
+  top: 7.9%;
+  left: 22%;
+  width: 300px;
+  height: auto;
+  padding: 15px 0px;
+  background-color: beige;
+  border: solid;
+  position: fixed;
+  z-index: 1000;
 }
-.hostels_div_ramp div{
-    padding: 5px 10px;
-    margin-top: 5px;
-    font-size: 20px;
-    background-color: azure; 
+.hostels_div_ramp div {
+  padding: 5px 10px;
+  margin-top: 5px;
+  font-size: 20px;
+  background-color: azure;
+}
+.hostels_div_ramp div:hover {
+  background-color: rgb(225, 223, 223);
+  cursor: pointer;
 }
