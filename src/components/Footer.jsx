@@ -40,7 +40,7 @@ function Footer() {
 
 
 <div>
-<div>Terms & Condition</div>
+<div onClick={()=>{navigate("/TermsAndConditions")}}>Terms & Condition</div>
 <div onClick={()=>{navigate("/Privacy_policy")}}>Privacy & Policy</div>
 <div onClick={()=>{navigate("/Help_support")}}>Help & Support</div>
 <div onClick={()=>{navigate("/Team_member")}}>Team Members</div>

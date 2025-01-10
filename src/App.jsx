@@ -27,6 +27,8 @@ import EnterNewPassword from "./components/EnterNewPassword";
 import HomeStyles from "./components/style_Modules/Home.module.css";
 import CreateHostel from "./components/adminBoard/CreateHostel";
 import Inspection from "./components/adminBoard/Inspection";
+import Terms_conditions from "./components/Terms_conditions";
+
 
 // Scroll restoration component
 function ScrollToTop() {
@@ -59,12 +61,12 @@ function App() {
             <Route path="/Help_support" element={<Help_support />} />
             <Route path="/Team_member" element={<Team_members />} />
             <Route path="/OnlineProcess" element={<OnlineProcess />} />
-            <Route path="/ForgotPassword" element={<Forgot_password />} />
             <Route path="/Reviews" element={<Reviews />} />
             <Route path="/AdminHome" element={<Admin_Home />} />
             <Route path="/ForgotPasswordOTP" element={<ForgotPassword_OTP />} />
             <Route path="/EnterNewPassword" element={<EnterNewPassword />} />
             <Route path="/ForgotPassword" element={<Forgot_password />} />
+            <Route path="/TermsAndConditions" element={<Terms_conditions/>} />
           </Routes>
         </Router>
       </div>

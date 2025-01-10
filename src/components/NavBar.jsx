@@ -19,7 +19,7 @@ function NavBar() {
 
 <nav className={NavBarStyles.boss_nav}>
     <div className={NavBarStyles.logo_div}><img onClick={()=>{navigate("/")}} src={new_logo_001} alt="" /></div>
-   <div className={NavBarStyles.user_bars}> <div onClick={()=>{navigate("/Profile")}} className={NavBarStyles.user_div}><FaUser/></div>
+   <div className={NavBarStyles.user_bars}> <div onClick={()=>{navigate("/Login")}} className={NavBarStyles.user_div}><FaUser/></div>
    <div onClick={()=>{handleHideBars()}} className={NavBarStyles.faBars_div}>
     
     

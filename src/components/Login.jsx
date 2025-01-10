@@ -20,7 +20,10 @@ function Login() {
     password: "",
   });
 
-  console.log(longInState.email, longInState.password);
+  const [signUpModal, setSignUpModal] = useState(false);
+  const [signUpSpinner, setSignUpSpinner] = useState(false);
+
+ 
 
   const handleOnchange = (e) => {
     const { name, value } = e.target;
@@ -43,13 +46,23 @@ function Login() {
       // Check response and notify user
       if (response.data.Error === false) {
         if (response.data.Data !== undefined) {
-          Notify({
-            title: "success",
-            message: "Login successfully",
-            type: "success",
-          });
-          localStorage.setItem("userData", JSON.stringify(response.data.Data));
-          navigate("/");
+
+setSignUpModal(true)
+setTimeout(() => {
+  setSignUpModal(false)
+  localStorage.setItem("userData", JSON.stringify(response.data.Data));
+  navigate("/");
+},5000);
+
+          // Notify({
+          //   title: "success",
+          //   message: "Login successfully",
+          //   type: "success",
+          // });
+          // localStorage.setItem("userData", JSON.stringify(response.data.Data));
+          // navigate("/");
+
+
         } else {
           await handleSendOTP(longInState.email);
         }
@@ -111,8 +124,7 @@ function Login() {
     setShowPassword(!showPassword);
   };
 
-  const [signUpModal, setSignUpModal] = useState(false);
-  const [signUpSpinner, setSignUpSpinner] = useState(false);
+ 
 
   return (
     <div className={LoginStyles.parent_ramp}>

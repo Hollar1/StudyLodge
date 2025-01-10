@@ -96,13 +96,31 @@ function SignUp() {
       const url = `${baseUrl}/student/register/sendOtp?email=${email}`;
       const OTPResponse = await axios.get(url);
       if (OTPResponse.data.Error === false) {
-        Notify({
-          title: "success",
-          message: "OTP sent successfully",
-          type: "success",
-        });
-        navigate("/Otp", { state:{email} });
-      } else {
+
+setSignUpModal(true)
+setInterval(() => {
+  setSignUpModal(false)
+  navigate("/Otp", { state:{email} });
+}, 3000);
+
+        // Notify({
+        //   title: "success",
+        //   message: "OTP sent successfully",
+        //   type: "success",
+        // });
+        // navigate("/Otp", { state:{email} });
+
+
+
+
+      }
+      
+      
+      
+      
+      
+      
+      else {
         Notify({
           title: "Error",
           message: response.data.Error || "An unexpected error occurred",
@@ -221,7 +239,7 @@ function SignUp() {
       {signUpModal && (
         <section className={SignUpStyles.signUp_modal}>
           <div>
-            <h3>Account Created Successfully</h3>
+            <h3>Account Created Successfully!</h3>
           </div>
           <div className={SignUpStyles.modal_text}>
             check your registered email to activate your account.
