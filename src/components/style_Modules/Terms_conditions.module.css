@@ -1,3 +1,8 @@
+.ramp{
+    background-color: rgb(230, 242, 249);
+}
+
+
 .header_div{
     margin-top: 99px;
     display: flex;
@@ -7,8 +12,20 @@
 height: 60px;
     background-color: aliceblue;
     width: 100%;
+    
 
 }
 .parent_div{
     padding-top: 170px;
+   padding-left: 10px;
+   padding-right: 10px;
+   padding-bottom: 50px;
+}
+.parent_div h3 {
+  color: #191970;
+  margin-top: 15px;
+  margin-bottom: 1px;
+}
+.parent_div p{
+font-size: 18px;
 }

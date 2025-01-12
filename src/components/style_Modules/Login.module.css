@@ -184,4 +184,8 @@ input:-webkit-autofill {
   padding-inline-start: 20px;
   font-weight: bold;
 }
+.create_btn {
+width: 10px;
+height: 20px;
 
+}

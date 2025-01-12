@@ -28,7 +28,7 @@ function SignUp() {
     password: "",
   });
 
-  const [mail, setMail] = useState("")
+  const [mail, setMail] = useState("");
 
   const handleOnchange = (e) => {
     const { value, name } = e.target;
@@ -54,13 +54,12 @@ function SignUp() {
       // Define the API URL
       const url = `${baseUrl}/student/register`;
 
-    // Send the request  
+      // Send the request
       const response = await axios.post(url, fd);
 
       // Check response and notify user
       if (response.data.Error === false) {
         setMail(response.data.Email);
-      
 
         await handleSendOTP(response.data.Email);
       } else {
@@ -90,18 +89,15 @@ function SignUp() {
   };
 
   const handleSendOTP = async (email) => {
-   
-  
     try {
       const url = `${baseUrl}/student/register/sendOtp?email=${email}`;
       const OTPResponse = await axios.get(url);
       if (OTPResponse.data.Error === false) {
-
-setSignUpModal(true)
-setInterval(() => {
-  setSignUpModal(false)
-  navigate("/Otp", { state:{email} });
-}, 3000);
+        setSignUpModal(true);
+        setInterval(() => {
+          setSignUpModal(false);
+          navigate("/Otp", { state: { email } });
+        }, 3000);
 
         // Notify({
         //   title: "success",
@@ -109,18 +105,7 @@ setInterval(() => {
         //   type: "success",
         // });
         // navigate("/Otp", { state:{email} });
-
-
-
-
-      }
-      
-      
-      
-      
-      
-      
-      else {
+      } else {
         Notify({
           title: "Error",
           message: response.data.Error || "An unexpected error occurred",
@@ -152,9 +137,11 @@ setInterval(() => {
             {" "}
             <h3>Sign Up</h3>
           </div>
-          <fieldset>
+          <fieldset aria-disabled={signUpSpinner}>
             <legend>First Name</legend>
-            <input className={SignUpStyles.to_upper}
+            <input
+              disabled={signUpSpinner}
+              className={SignUpStyles.to_upper}
               value={signUpDetails.firstName}
               name="firstName"
               onChange={handleOnchange}
@@ -163,7 +150,9 @@ setInterval(() => {
           </fieldset>
           <fieldset>
             <legend>Last Name</legend>
-            <input className={SignUpStyles.to_upper}
+            <input
+              disabled={signUpSpinner}
+              className={SignUpStyles.to_upper}
               value={signUpDetails.lastName}
               name="lastName"
               onChange={handleOnchange}
@@ -172,7 +161,9 @@ setInterval(() => {
           </fieldset>
           <fieldset>
             <legend>Gender</legend>
-            <input className={SignUpStyles.to_upper}
+            <input
+              disabled={signUpSpinner}
+              className={SignUpStyles.to_upper}
               value={signUpDetails.gender}
               name="gender"
               onChange={handleOnchange}
@@ -181,7 +172,9 @@ setInterval(() => {
           </fieldset>
           <fieldset>
             <legend>Email</legend>
-            <input className={SignUpStyles.to_lower}
+            <input
+              disabled={signUpSpinner}
+              className={SignUpStyles.to_lower}
               value={signUpDetails.email}
               name="email"
               onChange={handleOnchange}
@@ -190,7 +183,9 @@ setInterval(() => {
           </fieldset>
           <fieldset>
             <legend>Phone</legend>
-            <input className={SignUpStyles.to_lower}
+            <input
+              disabled={signUpSpinner}
+              className={SignUpStyles.to_lower}
               value={signUpDetails.phoneNumber}
               name="phoneNumber"
               onChange={handleOnchange}
@@ -198,9 +193,11 @@ setInterval(() => {
             />
           </fieldset>
 
-          <fieldset>
+          <fieldset aria-disabled={signUpSpinner}>
             <legend>Password</legend>
-            <input className={SignUpStyles.to_lower}
+            <input
+              disabled={signUpSpinner}
+              className={SignUpStyles.to_lower}
               value={signUpDetails.password}
               name="password"
               onChange={handleOnchange}
@@ -226,7 +223,8 @@ setInterval(() => {
         <div>
           Already have an account?
           <span
-            onClick={() => {
+            aria-disabled={signUpSpinner}
+            onClick={() => { if (!signUpSpinner)
               navigate("/login");
             }}
           >
@@ -265,8 +263,3 @@ setInterval(() => {
 }
 
 export default SignUp;
-
-
-
-
-

@@ -217,8 +217,21 @@ function CreateHostel() {
                 </div>
               </section>
             </section>
+            
 
             <section className={CreateHostelStyles.ramp2}>
+
+
+            <div className={CreateHostelStyles.address}>
+<fieldset><legend>Address</legend>
+<input placeholder="Enter Hostel Full Address" type="text" />
+</fieldset>
+
+             </div>
+
+
+
+              <div>
               <h3>Add Rooms</h3>
               <div className={CreateHostelStyles.fill}>
                 <label className={CreateHostelStyles.room_num}>
@@ -242,8 +255,22 @@ function CreateHostel() {
                   </select>
                 </label>
               </div>
+              </div>
+             
+
+ 
+              
             </section>
+
+
+
+
+
+
+
+
           </section>
+          
         </div>
 
         <div className={CreateHostelStyles.create_Hostel_btn}>

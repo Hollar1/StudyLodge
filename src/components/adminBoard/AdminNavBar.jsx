@@ -9,6 +9,7 @@ import {
   FaUserTie,
   FaComment,
   FaEnvelope,
+  FaGear,
 } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 
@@ -74,6 +75,14 @@ function AdminNavBar() {
             navigate("/AdminHome");
           }}
         >
+          Registered'Members(70)
+        </div>
+
+        <div
+          onClick={() => {
+            navigate("/AdminHome");
+          }}
+        >
           Home
         </div>
       </nav>
@@ -114,6 +123,14 @@ function AdminNavBar() {
               <FaComment />
             </div>
             <p>Send SMS</p>
+          </div>
+
+          <div className={AdminHomeStyles.add_icon}>
+            <div className={AdminHomeStyles.house_icon}>
+              {" "}
+              <FaGear />
+            </div>
+            <p>Settings</p>
           </div>
 
           {/* <div className={AdminHomeStyles.add_icon}>

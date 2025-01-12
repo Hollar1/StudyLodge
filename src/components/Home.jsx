@@ -37,7 +37,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carousel styles
 import { Carousel } from "react-responsive-carousel";
-import '/custom-carousel.css';
+import "/custom-carousel.css";
 
 function Home() {
   const settings = {
@@ -57,12 +57,10 @@ function Home() {
 
   const navigate = useNavigate();
   return (
+    <div>
+      <div className={HomeStyles.parent_ramp}>
+        <NavBar />
 
-<div>
-
-    <div className={HomeStyles.parent_ramp}>
-      <NavBar />
-      
         <div className={HomeStyles.display_parent_div}>
           <div className={HomeStyles.display_ramp}>
             <Carousel
@@ -116,7 +114,6 @@ function Home() {
         <section className={HomeStyles.trusted}>
           <h3>We are trusted partner in quality student accommodation! </h3>
 
-         
           <p>
             StudyLodge, we take pride in offering a wide range of comfortable,
             secure, and contemporary housing solutions carefully designed to
@@ -134,23 +131,25 @@ function Home() {
           <h3>Our Student Accommodation Services</h3>
           <p>
             We provide a range of living spaces designed to cater to various
-            preferences and needs. Here's an overview of the services we offer:
+            preferences and needs, Whether you prefer the solitude of a studio,
+            the semi-private setup of an en-suite room, or the camaraderie of
+            shared flats, our accommodations are designed to suit diverse
+            lifestyles and needs. Bellow an overview of the services we offer:-
           </p>
 
           <Carousel
             showArrows
-             autoPlay={false}
+            autoPlay={false}
             infiniteLoop={true}
             autoFocus={false}
             interval={4000}
             showIndicators={false}
             showThumbs={false}
-          
           >
             <div className={HomeStyles.our_services_div}>
               <img src={Single_bed_room} alt="" />
               <h4 className={HomeStyles.header}>Studios:</h4>
-              <p   className={HomeStyles.top_writeUp}>
+              <p className={HomeStyles.top_writeUp}>
                 Our studio apartments are fully self-contained units, ideal for
                 students who value privacy and independence. Each studio comes
                 with its own private kitchen and bathroom, allowing you to enjoy
@@ -198,12 +197,12 @@ function Home() {
               </p>
             </div>
           </Carousel>
-          <p className={HomeStyles.prefer}>
+          {/* <p className={HomeStyles.prefer}>
             {" "}
             Whether you prefer the solitude of a studio, the semi-private setup
             of an en-suite room, or the camaraderie of shared flats, our
             accommodations are designed to suit diverse lifestyles and needs.
-          </p>
+          </p> */}
         </section>
 
         <div></div>
@@ -705,7 +704,6 @@ function Home() {
 
         <Footer />
       </div>
-   
     </div>
   );
 }

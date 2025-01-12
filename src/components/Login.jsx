@@ -50,9 +50,10 @@ function Login() {
 setSignUpModal(true)
 setTimeout(() => {
   setSignUpModal(false)
-  localStorage.setItem("userData", JSON.stringify(response.data.Data));
   navigate("/");
 },5000);
+localStorage.setItem("userData", JSON.stringify(response.data.Data));
+// navigate("/");
 
           // Notify({
           //   title: "success",
@@ -195,7 +196,8 @@ setTimeout(() => {
           <div>
             Don't have an account ?
             <span
-              onClick={() => {
+            aria-disabled={signUpSpinner}
+              onClick={() => { if (!signUpSpinner)
                 navigate("/SignUp");
               }}
             >

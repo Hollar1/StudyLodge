@@ -14,6 +14,7 @@
 .ramp1 {
   border: solid 3px;
   width: 550px;
+  overflow: auto;
 
   padding-bottom: 5px;
 }
@@ -75,7 +76,7 @@
   font-size: 18px;
 }
 
-.features_fieldSet {
+.features_fieldSet  {
   display: flex;
   gap: 100px;
   padding-left: 10px;
@@ -84,6 +85,9 @@
   width: 500px;
   margin: auto;
   margin-top: 20px;
+  overflow: auto;
+  height: 150px;
+
 }
 
 .features_fieldSet h4 {
@@ -101,6 +105,8 @@
   width: 850px;
   border: solid 3px;
   height: 700px;
+
+  
 }
 .ramp2  h3{
   text-align: center;
@@ -238,4 +244,28 @@ justify-content: center;
 .select_day_time_ramp div{
   font-size: 18px;
   font-weight: bold;
+}
+.address fieldset{
+width: 600px;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 50px;
+margin: auto;
+border: solid;
+}
+.address fieldset legend{
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.address fieldset input{
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  margin-inline-start: 10px;
+  font-size: 18px;
+  text-transform: capitalize;
 }
