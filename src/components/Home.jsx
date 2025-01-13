@@ -134,7 +134,7 @@ function Home() {
             preferences and needs, Whether you prefer the solitude of a studio,
             the semi-private setup of an en-suite room, or the camaraderie of
             shared flats, our accommodations are designed to suit diverse
-            lifestyles and needs. Bellow an overview of the services we offer:-
+            lifestyles and needs. Bellow is an overview of the services we offer:-
           </p>
 
           <Carousel

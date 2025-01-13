@@ -53,7 +53,7 @@ function Hostel() {
       <NavBar />
 
       <div className={HostelStyles.header_div}>
-        <h3>Hostel's name here</h3>
+        <h3>Scholar's Hostel</h3>
       </div>
       {/* accommodation_details_div_ramp */}
       <div className={HostelStyles.accommodation_details_div_ramp}>
@@ -83,10 +83,10 @@ function Hostel() {
 
       <section className={HostelStyles.ifo_section}>
         <div>
-          <h3>Information</h3>
+          <h3>Hostel's Address</h3>
         </div>
-
-        <div className={HostelStyles.key_value}>
+<div className={HostelStyles.hostel_address}>Number 35 Olorunshogo Street, Ara Village, Ilorin, Kwara State.</div>
+        {/* <div className={HostelStyles.key_value}>
           <div>Price: </div>
           <span>₦650,000.00</span>
         </div>
@@ -109,7 +109,7 @@ function Hostel() {
         <div className={HostelStyles.key_value}>
           <div>Address: </div>
           <span>650,000.00</span>
-        </div>
+        </div> */}
       </section>
 
       <section className={HostelStyles.feature_section}>
