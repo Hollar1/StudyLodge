@@ -68,6 +68,8 @@ function NavBar() {
           <div>The Comfort (offa poly)</div>
           <div>Sun Shine (A.A.U. Akungba)</div>
           <div>Guru Home (K.S.U. Molete)</div>
+          <div onClick={()=>{navigate("/AdminHome")}}>ADMIN DASHBOARD</div>
+          <div onClick={()=>{navigate("/Profile")}}>USER PROFILE</div>
         </div>
       )}
     </div>

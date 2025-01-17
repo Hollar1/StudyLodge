@@ -14,7 +14,6 @@
 //   const [signUpSpinner, setSignUpSpinner] = useState(false);
 //   const [otpInput, setOtpInput] = useState();
 
-
 //   const location = useLocation();
 //   const email = location.state?.email;
 
@@ -121,7 +120,7 @@
 //               <div className={OtpStyles.not_receive_otp}>
 //                 Don't receive an OTP ?
 //               </div>
-              
+
 //                 <button
 //                   onClick={() => {
 //                     handleSendOTP(email);
@@ -129,9 +128,8 @@
 //                   className={OtpStyles.resend}
 //                 >
 //                   Resend
-//                 </button> 
-              
-            
+//                 </button>
+
 //               <div className={OtpStyles.otp_submit_btn_div}>
 //                 <button type="submit">Submit</button>
 //               </div>
@@ -158,17 +156,6 @@
 // }
 
 // export default Otp;
-
-
-
-
-
-
-
-
-
-
-
 
 import React, { useState, useEffect } from "react";
 import NavBar from "./NavBar";
@@ -245,6 +232,9 @@ function Otp() {
           message: response.data.Error || "An unexpected error occurred",
           type: "danger",
         });
+
+
+        
       }
     } catch (error) {
       const errorMessage =
@@ -282,7 +272,8 @@ function Otp() {
 
       Notify({
         title: "Error",
-        message: "You have reached the maximum resend attempts. Please wait 3 hours before trying again.",
+        message:
+          "You have reached the maximum resend attempts. Please wait 3 hours before trying again.",
         type: "danger",
       });
       return;
@@ -390,16 +381,3 @@ function Otp() {
 }
 
 export default Otp;
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -85,7 +85,9 @@ function Hostel() {
         <div>
           <h3>Hostel's Address</h3>
         </div>
-<div className={HostelStyles.hostel_address}>Number 35 Olorunshogo Street, Ara Village, Ilorin, Kwara State.</div>
+        <div className={HostelStyles.hostel_address}>
+          Number 35 Olorunshogo Street, Ara Village, Ilorin, Kwara State.
+        </div>
         {/* <div className={HostelStyles.key_value}>
           <div>Price: </div>
           <span>₦650,000.00</span>
@@ -167,7 +169,7 @@ function Hostel() {
             </span>
           </div>
 
-          <div className={HostelStyles.rooms_ramp_div}>
+          {/* <div className={HostelStyles.rooms_ramp_div}>
             <table>
             
 
@@ -210,7 +212,335 @@ function Hostel() {
                 </tr>
               </tbody>
             </table>
-          </div>
+          </div> */}
+
+          {/* <section>
+  <div className={HostelStyles.wxy}><span><input type="checkbox" /> Room 01</span> <span>A room Self'contain</span> <span>₦670,000.00</span></div>
+</section> */}
+
+          {/* <section className={HostelStyles.selectedRoom_section}>
+  <table>
+    <thead>
+      <tr>
+        <th>
+          Rooms
+        </th>
+        <th>
+         Unit
+        </th>
+        <th>
+         price
+        </th>
+      </tr>
+    </thead>
+
+<tbody>
+  <tr>
+    <td>
+    <input type="checkbox" />  Room 1
+    </td>
+    <td>
+    A room Self'contain
+    </td>
+    <td>
+    ₦670
+    </td>
+  </tr>
+</tbody>
+
+  </table>
+</section> */}
+
+          <section className={HostelStyles.selectedRoom_section}>
+
+            <div className={HostelStyles.parent_ramp}>
+              <div>
+                <h3>Room 01 </h3>
+                <div>
+                  Unit: <span>A Room Self'Contain</span>
+                </div>
+                <div>
+                  Price: <span>₦670,000.00</span>
+                </div>
+                <div>
+                  Status: <span>Available</span>
+                </div>
+              </div>
+
+              <div>
+                {" "}
+                <input
+                  className={HostelStyles.the_checkbox}
+                  type="checkbox"
+                  value={"Room 01"}
+                  checked={selectedRoom === "Room 01"}
+                  onChange={handleSelectedRoom}
+                />
+              </div>
+            </div>
+            <hr />
+
+
+
+            <div className={HostelStyles.parent_ramp}>
+              <div>
+                <h3>Room 02 </h3>
+                <div>
+                  Unit: <span>A Room Self'Contain</span>
+                </div>
+                <div>
+                  Price: <span>₦670,000.00</span>
+                </div>
+                <div>
+                  Status: <span>Available</span>
+                </div>
+              </div>
+
+              <div>
+                {" "}
+                <input
+                  className={HostelStyles.the_checkbox}
+                  type="checkbox"
+                  value={"Room 02"}
+                  checked={selectedRoom === "Room 02"}
+                  onChange={handleSelectedRoom}
+                />
+              </div>
+            </div>
+            <hr />
+
+
+
+            <div className={HostelStyles.parent_ramp}>
+              <div>
+                <h3>Room 03 </h3>
+                <div>
+                  Unit: <span>A Room Self'Contain</span>
+                </div>
+                <div>
+                  Price: <span>₦670,000.00</span>
+                </div>
+                <div>
+                  Status: <span>Available</span>
+                </div>
+              </div>
+
+              <div>
+                {" "}
+                <input
+                  className={HostelStyles.the_checkbox}
+                  type="checkbox"
+                  value={"Room 03"}
+                  checked={selectedRoom === "Room 03"}
+                  onChange={handleSelectedRoom}
+                />
+              </div>
+            </div>
+            <hr />
+
+
+
+            <div className={HostelStyles.parent_ramp}>
+              <div>
+                <h3>Room 04 </h3>
+                <div>
+                  Unit: <span>A Room Self'Contain</span>
+                </div>
+                <div>
+                  Price: <span>₦670,000.00</span>
+                </div>
+                <div>
+                  Status: <span>Available</span>
+                </div>
+              </div>
+
+              <div>
+                {" "}
+                <input
+                  className={HostelStyles.the_checkbox}
+                  type="checkbox"
+                  value={"Room 04"}
+                  checked={selectedRoom === "Room 04"}
+                  onChange={handleSelectedRoom}
+                />
+              </div>
+            </div>
+            <hr />
+
+
+
+            <div className={HostelStyles.parent_ramp}>
+              <div>
+                <h3>Room 05 </h3>
+                <div>
+                  Unit: <span>A Room Self'Contain</span>
+                </div>
+                <div>
+                  Price: <span>₦670,000.00</span>
+                </div>
+                <div>
+                  Status: <span>Available</span>
+                </div>
+              </div>
+
+              <div>
+                {" "}
+                <input
+                  className={HostelStyles.the_checkbox}
+                  type="checkbox"
+                  value={"Room 05"}
+                  checked={selectedRoom === "Room 05"}
+                  onChange={handleSelectedRoom}
+                />
+              </div>
+            </div>
+            <hr />
+
+
+
+            <div className={HostelStyles.parent_ramp}>
+              <div>
+                <h3>Room 06 </h3>
+                <div>
+                  Unit: <span>A Room Self'Contain</span>
+                </div>
+                <div>
+                  Price: <span>₦670,000.00</span>
+                </div>
+                <div>
+                  Status: <span>Available</span>
+                </div>
+              </div>
+
+              <div>
+                {" "}
+                <input
+                  className={HostelStyles.the_checkbox}
+                  type="checkbox"
+                  value={"Room 06"}
+                  checked={selectedRoom === "Room 06"}
+                  onChange={handleSelectedRoom}
+                />
+              </div>
+            </div>
+            <hr />
+
+
+
+            <div className={HostelStyles.parent_ramp}>
+              <div>
+                <h3>Room 07 </h3>
+                <div>
+                  Unit: <span>A Room Self'Contain</span>
+                </div>
+                <div>
+                  Price: <span>₦670,000.00</span>
+                </div>
+                <div>
+                  Status: <span>Available</span>
+                </div>
+              </div>
+
+              <div>
+                {" "}
+                <input
+                  className={HostelStyles.the_checkbox}
+                  type="checkbox"
+                  value={"Room 07"}
+                  checked={selectedRoom === "Room 07"}
+                  onChange={handleSelectedRoom}
+                />
+              </div>
+            </div>
+            <hr />
+
+
+
+            <div className={HostelStyles.parent_ramp}>
+              <div>
+                <h3>Room 08 </h3>
+                <div>
+                  Unit: <span>A Room Self'Contain</span>
+                </div>
+                <div>
+                  Price: <span>₦670,000.00</span>
+                </div>
+                <div>
+                  Status: <span>Available</span>
+                </div>
+              </div>
+
+              <div>
+                {" "}
+                <input
+                  className={HostelStyles.the_checkbox}
+                  type="checkbox"
+                  value={"Room 08"}
+                  checked={selectedRoom === "Room 08"}
+                  onChange={handleSelectedRoom}
+                />
+              </div>
+            </div>
+            <hr />
+
+
+
+            <div className={HostelStyles.parent_ramp}>
+              <div>
+                <h3>Room 09 </h3>
+                <div>
+                  Unit: <span>A Room Self'Contain</span>
+                </div>
+                <div>
+                  Price: <span>₦670,000.00</span>
+                </div>
+                <div>
+                  Status: <span>Available</span>
+                </div>
+              </div>
+
+              <div>
+                {" "}
+                <input
+                  className={HostelStyles.the_checkbox}
+                  type="checkbox"
+                  value={"Room 09"}
+                  checked={selectedRoom === "Room 09"}
+                  onChange={handleSelectedRoom}
+                />
+              </div>
+            </div>
+            <hr />
+
+
+
+            <div className={HostelStyles.parent_ramp}>
+              <div>
+                <h3>Room 10 </h3>
+                <div>
+                  Unit: <span>A Room Self'Contain</span>
+                </div>
+                <div>
+                  Price: <span>₦670,000.00</span>
+                </div>
+                <div>
+                  Status: <span>Available</span>
+                </div>
+              </div>
+
+              <div>
+                {" "}
+                <input
+                  className={HostelStyles.the_checkbox}
+                  type="checkbox"
+                  value={"Room 10"}
+                  checked={selectedRoom === "Room 10"}
+                  onChange={handleSelectedRoom}
+                />
+              </div>
+            </div>
+            <hr />
+          </section>
 
           <div className={HostelStyles.select_day_time_ramp}>
             <div>Select Day & Time</div>

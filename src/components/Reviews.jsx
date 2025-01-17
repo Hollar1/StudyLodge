@@ -1,12 +1,21 @@
 import React from "react";
 import ReviewStyles from "../components/style_Modules/Reviews.module.css";
 import { FaRegStar, FaStar } from "react-icons/fa6";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import LoginStyles from "./style_Modules/Login.module.css";
+import { Vortex } from "react-loader-spinner";
+import { baseUrl } from "./Config";
+import Notify from "./Notify";
+import axios from "axios";
+import { data } from "react-router-dom";
+
 function Reviews() {
   const [comment, setComment] = useState("");
-  const [reviewerName,setReviewerName]=useState("")
+  const [reviewerName, setReviewerName] = useState("");
   const [rating, setRating] = useState(0);
   const [submittedData, setSubmittedData] = useState([]);
+  const [signUpModal, setSignUpModal] = useState(false);
+  const [signUpSpinner, setSignUpSpinner] = useState(false);
 
   const handleCommentChange = (e) => {
     setComment(e.target.value);
@@ -16,14 +25,75 @@ function Reviews() {
     setRating(newRating);
   };
 
-  const handleSubmit = (e) => {
+  const getReview = async () => {
+    setSignUpSpinner(true);
+    try {
+      const url = `${baseUrl}/review/view`;
+      const response = await axios.get(url);
+      if (response.data.Error === false) {
+        setSubmittedData(response.data.Data);
+      } else {
+        Notify({
+          title: "Error",
+          message:
+            response.data.Error ||
+            "An unexpected error occurred while loading review",
+          type: "danger",
+        });
+      }
+    } catch (error) {
+      const errorMessage =
+        error.response?.data?.Error ||
+        error.message ||
+        "An error occurred while loading review";
+      Notify({
+        title: "Error",
+        message: errorMessage,
+        type: "danger",
+      });
+    } finally {
+      setSignUpSpinner(false);
+    }
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (comment && rating > 0) {
-      setSubmittedData([...submittedData, { comment, rating }]);
+    setSignUpSpinner(true);
+
+    try {
+      const fd = new FormData();
+      fd.append("FullName", reviewerName);
+      fd.append("Comment", comment);
+      fd.append("Rating", rating);
+      const url = `${baseUrl}/review`;
+      const response = await axios.post(url, fd);
+      if (response.data.Error === false) {
+        Notify({
+          title: "success",
+          message: "Review  successfully Submitted",
+          type: "success",
+        });
+        getReview();
+      } else {
+        Notify({
+          title: "Error",
+          message: response.data.Error || "An unexpected error occurred",
+          type: "danger",
+        });
+      }
+    } catch (error) {
+      const errorMessage =
+        error.response?.data?.Error || error.message || "An error occurred";
+      Notify({
+        title: "Error",
+        message: errorMessage,
+        type: "danger",
+      });
+    } finally {
+      setSignUpSpinner(false);
+      setReviewerName("");
       setComment("");
-      setRating(0);
-    } else {
-      alert("Please add a comment and a rating!");
+      setRating("");
     }
   };
 
@@ -31,9 +101,7 @@ function Reviews() {
     const stars = [1, 2, 3, 4, 5];
 
     return (
-      <div
-       
-      >
+      <div>
         {stars.map((star) => (
           <span
             key={star}
@@ -43,8 +111,6 @@ function Reviews() {
               marginRight: "4px",
             }}
           >
-            
-
             <FaStar />
           </span>
         ))}
@@ -52,17 +118,28 @@ function Reviews() {
     );
   };
 
+  useEffect(() => {
+    getReview();
+    console.log("Ola");
+  }, []);
+
   return (
     <div className={ReviewStyles.parent_ramp}>
       <div className={ReviewStyles.Review_parent_ramp}>
-       
-
         <form onSubmit={handleSubmit}>
-        <h3 className={ReviewStyles.leave_comment}>Leave a Comment and Rating</h3>
+          <h3 className={ReviewStyles.leave_comment}>
+            Leave a Comment and Rating
+          </h3>
           <section className={ReviewStyles.reviewer_name_section}>
             <fieldset>
               <legend>Full Name</legend>
-              <input type="text" />
+              <input
+                value={reviewerName}
+                onChange={(e) => {
+                  setReviewerName(e.target.value);
+                }}
+                type="text"
+              />
             </fieldset>
           </section>
 
@@ -71,7 +148,7 @@ function Reviews() {
               <legend>Review</legend>
               <textarea
                 rows="4"
-            cols="40"
+                cols="40"
                 placeholder="Write your comment here..."
                 value={comment}
                 onChange={handleCommentChange}
@@ -82,30 +159,29 @@ function Reviews() {
           <div className={ReviewStyles.stars}>
             <RatingStars rating={rating} onChange={handleRatingChange} />
           </div>
-        <div className={ReviewStyles.btn_div}><button>Submit Review</button></div>
-        
+          <div className={ReviewStyles.btn_div}>
+            <button>Submit Review</button>
+          </div>
         </form>
-        
       </div>
 
-
-
-
-
       <section className={ReviewStyles.all_review_section}>
-
-
-      <div className={ReviewStyles.header}><h3>Reviewers</h3></div>
+        <div className={ReviewStyles.header}>
+          <h3>Reviewers</h3>
+        </div>
         <div>
           <div>
             {submittedData.map((data, index) => (
               <div key={index}>
                 <div className={ReviewStyles.name_star}>
-                  <div>olatunde</div>
-                 <div  className={ReviewStyles.star}> <RatingStars  rating={data.rating} readOnly={true} /></div>
+                  <div>{data.FullName}</div>
+                  <div className={ReviewStyles.star}>
+                    {" "}
+                    <RatingStars rating={data.Rating} readOnly={true} />
+                  </div>
                 </div>
 
-                <p className={ReviewStyles.p}>{data.comment}</p>
+                <p className={ReviewStyles.p}>{data.Comment}</p>
               </div>
             ))}
           </div>
@@ -784,6 +860,32 @@ function Reviews() {
           </p>
         </div>
       </section>
+
+      {signUpModal && (
+        <section className={LoginStyles.signUp_modal}>
+          <div>
+            <h3>Welcome to StudyLodge!</h3>
+          </div>
+          <div className={LoginStyles.modal_text}>
+            Looking for perfect place to stay during your study ? You're in the
+            right place.
+          </div>
+        </section>
+      )}
+
+      {signUpSpinner && (
+        <section className={LoginStyles.spinner}>
+          <div>Loading.....</div>{" "}
+          <Vortex
+            visible={true}
+            height="50"
+            ariaLabel="vortex-loading"
+            wrapperStyle={{}}
+            wrapperClass="vortex-wrapper"
+            colors={["red", "green", "blue", "yellow", "orange", "purple"]}
+          />
+        </section>
+      )}
     </div>
   );
 }

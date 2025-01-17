@@ -221,6 +221,41 @@ padding: 7px 0px;
   }
 
 
+  .selectedRoom_section{
+    padding-left: 5px;
+    height: 317px;
+    overflow: auto;
+    border-bottom: solid 3px;
+    
+  }
+  .selectedRoom_section div{
+    margin-top: 3px;
+    font-weight: bold;
+    padding-bottom: 2px;
+  
+    
+  }
+  .selectedRoom_section div h3{
+    color: rgb(14, 14, 165);
+  }
+  .selectedRoom_section div span{
+    font-weight: 100;
+  }
+  .parent_ramp{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px;
+    margin-top: 3px;
+    font-weight: bold;
+    padding-bottom: 2px;
+  }
+
+  .the_checkbox{
+transform: scale(1.5);
+accent-color: #191970;
+  }
+
 
 
 
