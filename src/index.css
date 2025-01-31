@@ -57,4 +57,33 @@ html, body{
 
 
 
- 
+  .selected_date {
+    background-color: gray;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  
+  /* Resize the calendar container */
+.react-calendar {
+  width: 350px; /* Set the width of the calendar */
+  height: 250px; /* Set the height of the calendar */
+  font-size: 12px; /* Adjust the font size to make it smaller */
+}
+
+/* Resize the tiles (days) */
+.react-calendar__tile {
+  font-size: 12px; /* Make the text in each day tile smaller */
+  height: 30px; /* Adjust the height of each tile */
+}
+
+/* Adjust the header font size */
+.react-calendar__month-view__weekdays {
+  font-size: 14px; /* Adjust the weekdays' font size */
+}
+
+/* Adjust the navigation buttons */
+.react-calendar__navigation button {
+  font-size: 12px; /* Make the navigation buttons smaller */
+}

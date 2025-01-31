@@ -28,6 +28,8 @@ import HomeStyles from "./components/style_Modules/Home.module.css";
 import CreateHostel from "./components/adminBoard/CreateHostel";
 import Inspection from "./components/adminBoard/Inspection";
 import Terms_conditions from "./components/Terms_conditions";
+import Job_Vacancy from "./components/Job_Vacancy";
+import AdminLogin from "./components/AdminLogin";
 
 
 // Scroll restoration component
@@ -67,6 +69,8 @@ function App() {
             <Route path="/EnterNewPassword" element={<EnterNewPassword />} />
             <Route path="/ForgotPassword" element={<Forgot_password />} />
             <Route path="/TermsAndConditions" element={<Terms_conditions/>} />
+            <Route path="/JobVacancy" element={<Job_Vacancy/>} />
+            <Route path="/AdminLogin" element={<AdminLogin/>} />
           </Routes>
         </Router>
       </div>

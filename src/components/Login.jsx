@@ -206,6 +206,9 @@ localStorage.setItem("userData", JSON.stringify(response.data.Data));
             </span>
           </div>
         </section>
+
+
+        
       </section>
 
       {signUpModal && (

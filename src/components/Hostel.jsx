@@ -1,5 +1,10 @@
 import React, { useState } from "react";
 import HostelStyles from "../components/style_Modules/Hostel.module.css";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import ImageGallery from 'react-image-gallery'; // Correct import
+import 'react-image-gallery/styles/css/image-gallery.css'; // Ensure the styles are included
+
 import NavBar from "./NavBar";
 import Footer from "../components/Footer";
 import { FaAngleDown } from "react-icons/fa";
@@ -7,6 +12,13 @@ import { Hourglass } from "react-loader-spinner";
 import { useNavigate } from "react-router-dom";
 import { format, addDays } from "date-fns";
 import { FaCheck } from "react-icons/fa6";
+import bedRoom from "../assets/images/Double_bed_room.jpg"
+import emptyRoom from "../assets/images/Empty_room.jpg"
+import Hostel_003 from "../assets/images/Hostel_003.jpg"
+import kitchen from "../assets/images/kitch.jpg"
+import singleRoom from "../assets/images/Single_bed_rom.jpg"
+import toilet from "../assets/images/Toilet-1.jpg"
+import logo from "../assets/images/new_logo_001.png"
 
 const allowedDays = [2, 4, 6]; // Tuesday (2), Thursday (4), Saturday (6)
 
@@ -17,8 +29,73 @@ const daySpecificTimes = {
 };
 
 function Hostel() {
+  // const [selectedDate, setSelectedDate] = useState(null);
   const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedRoom, setSelectedRoom] = useState(null);
+  const [selectedModal, setSelectedModal] = useState(false);
+  const [showRoom,setShowRoom]=useState(false)
+  const [showCalender,setShowCalender]=useState(false)
 
+  const handelShowRoom =()=>{
+setShowRoom(!showRoom)
+  }
+
+
+  const handelShowCalender =()=>{
+setShowCalender(!showCalender)
+  }
+
+
+
+
+  const images = [
+    {
+      original: Hostel_003,
+      thumbnail: Hostel_003,
+    },
+    {
+      original: singleRoom,
+      thumbnail: singleRoom,
+    },
+
+    {
+      original: kitchen,
+      thumbnail: kitchen,
+    },
+
+    {
+      original: toilet,
+      thumbnail: toilet,
+    },
+
+    {
+      original: emptyRoom,
+      thumbnail: emptyRoom,
+    },
+    {
+      original: bedRoom,
+      thumbnail: bedRoom,
+    },
+    {
+      original: logo,
+      thumbnail: logo,
+    },
+
+
+
+  ];
+  
+
+
+
+
+  const handlePayAgentFee = () => {
+    if (!selectedDate || !selectedRoom) {
+      alert("Room or Inspect date and time have not selected");
+    } else {
+      setSelectedModal(true);
+    }
+  };
   // Generate next 14 days and filter allowed days
   const generateAvailableDates = () => {
     const today = new Date();
@@ -36,16 +113,77 @@ function Hostel() {
     return dates;
   };
 
+  // State to store the selected date (initially set to null)
+ 
+
+  // Function to check if the day is Tuesday, Thursday, or Saturday and set the time accordingly
+  const setTimeForSelectedDay = (date) => {
+    const day = date.getDay(); // getDay() returns 0 for Sunday, 1 for Monday, 2 for Tuesday, etc.
+    let updatedDate = new Date(date);
+
+    if (day === 2) {
+      // Tuesday
+      updatedDate.setHours(16, 30, 0, 0); // Set time to 4:30 PM
+    } else if (day === 4) {
+      // Thursday
+      updatedDate.setHours(10, 0, 0, 0); // Set time to 10:00 AM
+    } else if (day === 6) {
+      // Saturday
+      updatedDate.setHours(16, 0, 0, 0); // Set time to 4:00 PM
+    }
+
+    return updatedDate;
+  };
+
+  // Function to check if the day is Tuesday, Thursday, or Saturday
+  const isSelectableDate = (date) => {
+    const day = date.getDay();
+    return day === 2 || day === 4 || day === 6; // 2 = Tuesday, 4 = Thursday, 6 = Saturday
+  };
+
+  // Format the selected date to Day-Month-Year format
+  const formattedDate = selectedDate
+    ? selectedDate.toLocaleDateString("en-GB", {
+        weekday: "long", // "Monday"
+        year: "numeric", // "2025"
+        month: "long", // "January"
+        day: "numeric", // "31"
+      })
+    : "No date selected";
+
+  // Format the selected date to Day-Month-Year (DD-MM-YYYY)
+  const shortFormattedDate = selectedDate
+    ? selectedDate.toLocaleDateString("en-GB", {
+        day: "2-digit", // "31"
+        month: "2-digit", // "01"
+        year: "numeric", // "2025"
+      })
+    : "No date selected";
+
+  // Format time in 12-hour format with AM/PM
+  const timeFormatted = selectedDate
+    ? selectedDate.toLocaleTimeString("en-US", {
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: true, // Enables 12-hour format with AM/PM
+      })
+    : "No time selected";
+
   const availableDates = generateAvailableDates();
 
   const navigate = useNavigate();
 
-  const [selectedRoom, setSelectedRoom] = useState(null);
-  console.log(selectedRoom);
-
   const handleSelectedRoom = (e) => {
+   handelShowRoom()
     const { value } = e.target;
     setSelectedRoom(selectedRoom === value ? null : value);
+  };
+
+  const handleNo = () => {
+    setSelectedDate("");
+    setSelectedRoom("");
+    setSelectedModal(false);
+    setShowCalender("")
   };
 
   return (
@@ -79,7 +217,36 @@ function Hostel() {
 
       {/* accommodation_details_div_ramp */}
 
-      <div>IMAGES SPACE</div>
+     
+     
+      <div>
+      <h1>Hostel Gallery</h1>
+      <ImageGallery 
+items={images}
+autoPlay={false}
+    showThumbnails={true}
+    slideInterval={3000}
+    thumbnailPosition="bottom"
+ />
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       <section className={HostelStyles.ifo_section}>
         <div>
@@ -88,30 +255,6 @@ function Hostel() {
         <div className={HostelStyles.hostel_address}>
           Number 35 Olorunshogo Street, Ara Village, Ilorin, Kwara State.
         </div>
-        {/* <div className={HostelStyles.key_value}>
-          <div>Price: </div>
-          <span>₦650,000.00</span>
-        </div>
-
-        <div className={HostelStyles.key_value}>
-          <div>Hostel's Name: </div>
-          <span>650,000.00</span>
-        </div>
-
-        <div className={HostelStyles.key_value}>
-          <div>Unite's: </div>
-          <span>650,000.00</span>
-        </div>
-
-        <div className={HostelStyles.key_value}>
-          <div>Total Room: </div>
-          <span>650,000.00</span>
-        </div>
-
-        <div className={HostelStyles.key_value}>
-          <div>Address: </div>
-          <span>650,000.00</span>
-        </div> */}
       </section>
 
       <section className={HostelStyles.feature_section}>
@@ -163,96 +306,13 @@ function Hostel() {
           </div>
 
           <div className={HostelStyles.select_room_ramp}>
-            <div>Select Room</div>
-            <span>
+            <div onClick={handelShowRoom}>Select Room         {selectedRoom?<span>selected</span>:<span>not selected</span>}  </div>
+            <span onClick={handelShowRoom}>
               <FaAngleDown />
             </span>
           </div>
 
-          {/* <div className={HostelStyles.rooms_ramp_div}>
-            <table>
-            
-
-              <tbody>
-                <tr>
-                  <td className={HostelStyles.room_status}>available</td>
-                  <td className={HostelStyles.room_td}>
-                    Room 01{" "}
-                    <input
-                      type="checkbox"
-                      value={"Room 01"}
-                      checked={selectedRoom === "Room 01"}
-                      onChange={handleSelectedRoom}
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td className={HostelStyles.room_status}>available</td>
-                  <td className={HostelStyles.room_td}>
-                    Room 02{" "}
-                    <input
-                      type="checkbox"
-                      value={"Room 02"}
-                      checked={selectedRoom === "Room 02"}
-                      onChange={handleSelectedRoom}
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td className={HostelStyles.room_status}>available</td>
-                  <td className={HostelStyles.room_td}>
-                    Room 03{" "}
-                    <input
-                      type="checkbox"
-                      value={"Room 03"}
-                      checked={selectedRoom === "Room 03"}
-                      onChange={handleSelectedRoom}
-                    />
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div> */}
-
-          {/* <section>
-  <div className={HostelStyles.wxy}><span><input type="checkbox" /> Room 01</span> <span>A room Self'contain</span> <span>₦670,000.00</span></div>
-</section> */}
-
-          {/* <section className={HostelStyles.selectedRoom_section}>
-  <table>
-    <thead>
-      <tr>
-        <th>
-          Rooms
-        </th>
-        <th>
-         Unit
-        </th>
-        <th>
-         price
-        </th>
-      </tr>
-    </thead>
-
-<tbody>
-  <tr>
-    <td>
-    <input type="checkbox" />  Room 1
-    </td>
-    <td>
-    A room Self'contain
-    </td>
-    <td>
-    ₦670
-    </td>
-  </tr>
-</tbody>
-
-  </table>
-</section> */}
-
-          <section className={HostelStyles.selectedRoom_section}>
-
+        { showRoom&&<section className={HostelStyles.selectedRoom_section}>
             <div className={HostelStyles.parent_ramp}>
               <div>
                 <h3>Room 01 </h3>
@@ -279,8 +339,6 @@ function Hostel() {
               </div>
             </div>
             <hr />
-
-
 
             <div className={HostelStyles.parent_ramp}>
               <div>
@@ -309,8 +367,6 @@ function Hostel() {
             </div>
             <hr />
 
-
-
             <div className={HostelStyles.parent_ramp}>
               <div>
                 <h3>Room 03 </h3>
@@ -337,8 +393,6 @@ function Hostel() {
               </div>
             </div>
             <hr />
-
-
 
             <div className={HostelStyles.parent_ramp}>
               <div>
@@ -367,8 +421,6 @@ function Hostel() {
             </div>
             <hr />
 
-
-
             <div className={HostelStyles.parent_ramp}>
               <div>
                 <h3>Room 05 </h3>
@@ -395,8 +447,6 @@ function Hostel() {
               </div>
             </div>
             <hr />
-
-
 
             <div className={HostelStyles.parent_ramp}>
               <div>
@@ -425,8 +475,6 @@ function Hostel() {
             </div>
             <hr />
 
-
-
             <div className={HostelStyles.parent_ramp}>
               <div>
                 <h3>Room 07 </h3>
@@ -453,8 +501,6 @@ function Hostel() {
               </div>
             </div>
             <hr />
-
-
 
             <div className={HostelStyles.parent_ramp}>
               <div>
@@ -483,8 +529,6 @@ function Hostel() {
             </div>
             <hr />
 
-
-
             <div className={HostelStyles.parent_ramp}>
               <div>
                 <h3>Room 09 </h3>
@@ -512,8 +556,6 @@ function Hostel() {
             </div>
             <hr />
 
-
-
             <div className={HostelStyles.parent_ramp}>
               <div>
                 <h3>Room 10 </h3>
@@ -540,48 +582,61 @@ function Hostel() {
               </div>
             </div>
             <hr />
-          </section>
+          </section>}
 
           <div className={HostelStyles.select_day_time_ramp}>
-            <div>Select Day & Time</div>
-            <span>
+            <div onClick={handelShowCalender}>Select Day & Time {selectedDate?<span>selected</span>:<span>not selected</span>}  </div>
+            <span onClick={handelShowCalender}>
               <FaAngleDown />
             </span>
           </div>
 
-          <div>
-            <div className={HostelStyles.calender_ramp}>
-              {availableDates.map(({ date, time }) => (
-                <div key={date} onClick={() => setSelectedDate({ date, time })}>
-                  <div className={HostelStyles.days_time_ramp}>
-                    {" "}
-                    <div>{format(date, "EEEE, MMM d, yyyy")} </div>
-                    {time}{" "}
-                  </div>
-                </div>
-              ))}
-            </div>
+     {selectedDate ? "": <div>
+      { showCalender&&  <div className={HostelStyles.calender_div}>
+            <DatePicker
+              selected={selectedDate} // Bind the selected date to state
+              onChange={(date) => setSelectedDate(setTimeForSelectedDay(date))} // Update state when the date changes
+              filterDate={isSelectableDate} // Apply filter to allow only specific days
+              inline
+            />
+            //{" "}
+           
+          </div>}
+      </div>}
 
-            <div className={HostelStyles.selected_date_time_ramp}>
-              {selectedRoom && <p>Selected Room:- {selectedRoom}</p>}
-              {selectedDate && (
-                <p>
-                  Selected Date & Time:-{" "}
-                  {format(selectedDate.date, "EEEE, MMM d, yyyy")} //{" "}
-                  {selectedDate.time} //
-                </p>
-              )}
-            </div>
-          </div>
+
+
+
+
+          {selectedModal && (
+              <div className={HostelStyles.selected_date_time_ramp}>
+                <h4>PLEASE CONFIRM BOOKING</h4>
+                <p>Selected Room:- {selectedRoom}</p>
+                {selectedDate && (
+                  <div>
+                    <p>Selected Date:- {formattedDate}</p>
+                    <p> Selected Time:- {timeFormatted} </p>
+                    <div className={HostelStyles.no_yes}>
+                      <button onClick={handleNo}>Close</button>{" "}
+                      <button
+                        onClick={() => {
+                          navigate("/Payment");
+                        }}
+                      >
+                        Confirm
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
+
+
+
+
 
           <div className={HostelStyles.agent_fee_btn}>
-            <button
-              onClick={() => {
-                navigate("/Payment");
-              }}
-            >
-              Pay Agent Fee
-            </button>
+            <button onClick={handlePayAgentFee}>Pay Agent Fee</button>
           </div>
         </fieldset>
       </section>
@@ -592,3 +647,4 @@ function Hostel() {
 }
 
 export default Hostel;
+

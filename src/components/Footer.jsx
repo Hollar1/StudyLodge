@@ -31,10 +31,11 @@ function Footer() {
  <div className={FooterStyles.footer_details}>
 
 <div>
-  <div onClick={()=>{navigate("/")}}>Home</div>
+  {/* <div onClick={()=>{navigate("/")}}>Home</div> */}
+  <div onClick={()=>{navigate("/AdminLogin")}}>Admin Login</div>
 <div onClick={()=>{navigate("/About")}}>About Us</div>
-<div>My Account</div>
-<div>Job Vacancies</div>
+<div onClick={()=>{navigate("/Profile")}}>My Account</div>
+<div onClick={()=>{navigate("/JobVacancy")}}>Job Vacancies</div>
 </div>
 
 

@@ -1,266 +1,262 @@
-.header_div{
-    margin-top: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #191970;
-    color: white;
-    padding: 3px 0px;
-    font-size: 18px;
-    position: sticky;
-    top: 104px;
-    z-index:950;
+.header_div {
+  margin-top: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #191970;
+  color: white;
+  padding: 3px 0px;
+  font-size: 18px;
+  position: sticky;
+  top: 104px;
+  z-index: 950;
 }
 
-.accommodation_details_div_ramp div{
-display: flex;
-justify-content: center;
-align-items: center;
-    margin-top: 20px;
-  
-  
+.accommodation_details_div_ramp div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
-.about_hostel_div{
-    margin:10px 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
+.about_hostel_div {
+  margin: 10px 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
 }
 
-
-
-.ifo_section div h3{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 3px;
-    color: #191970;
-    word-spacing: 5px;
+.ifo_section div h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 3px;
+  color: #191970;
+  word-spacing: 5px;
 }
 
-
-
-.key_value{
-    display: flex;
+.key_value {
+  display: flex;
   align-items: center;
   margin-left: 5px;
   margin-top: 7px;
-
 }
 
-.key_value div{
+.key_value div {
   color: black;
- 
-    font-size: 16.5px;
+
+  font-size: 16.5px;
 }
-.key_value span{
-    margin-left: 5px;
-    color: rgb(96, 93, 93);
+.key_value span {
+  margin-left: 5px;
+  color: rgb(96, 93, 93);
 }
 
-
-
-.feature_section h3{
+.feature_section h3 {
   text-align: center;
   margin-top: 20px;
   color: #191970;
 }
-.key_valueA{
+.key_valueA {
   display: flex;
   justify-content: space-between;
   margin-top: 5px;
   margin-left: 5px;
   margin-right: 10px;
   text-transform: capitalize;
-
 }
-.key_valueA div{
+.key_valueA div {
   color: black;
- 
 }
-.key_valueA span{
+.key_valueA span {
   color: rgb(96, 93, 93);
 }
 
-
-
-.hostel_address{
+.hostel_address {
   margin: 0% 5px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-.booking_section fieldset legend{
-    margin: auto;
-    font-weight: bold;
+.booking_section fieldset legend {
+  margin: auto;
+  font-weight: bold;
 }
-.booking_section fieldset{
-    margin-top: 20px;
-    border: solid 2px;
-
+.booking_section fieldset {
+  margin-top: 20px;
+  border: solid 2px;
 }
-.nonrefundable_div{
-    text-align: center;
-    background-color: rgb(248, 110, 110);
-    background-color: rgb(211, 200, 200);
-    padding: 5px;
-    font-size: 14px;
-    margin-bottom: 10px;
-    text-transform: capitalize;
-    
+.nonrefundable_div {
+  text-align: center;
+  background-color: rgb(248, 110, 110);
+  background-color: rgb(211, 200, 200);
+  padding: 5px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
 }
 
-.select_room_ramp{
-    display: flex;
+.select_room_ramp {
+  display: flex;
   justify-content: space-around;
   font-weight: bold;
   margin-top: 20px;
   font-size: 20px;
   color: #191970;
-
 }
- .rooms_ramp_div{
-
- }   
- .rooms_ramp_div table{
-    border-collapse: collapse;
+.rooms_ramp_div {
+}
+.rooms_ramp_div table {
+  border-collapse: collapse;
   width: 100%;
-  padding:5px;
+  padding: 5px;
   text-transform: capitalize;
- }
- .rooms_ramp_div table,thead,tr,td{
-   border-top: solid;
-   border: solid;
-   border-left: none;
-   border-right: none;
-   padding:5px;
- 
- }
- .room_td{
-    display: flex;
-    border: none;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 18px;
-    margin-right: 7px;
- }
- .room_status{
+}
+.rooms_ramp_div table,
+thead,
+tr,
+td {
+  border-top: solid;
+  border: solid;
+  border-left: none;
+  border-right: none;
+  padding: 5px;
+}
+.room_td {
+  display: flex;
+  border: none;
+  align-items: center;
+  justify-content: space-between;
   font-size: 18px;
- }
+  margin-right: 7px;
+}
+.room_status {
+  font-size: 18px;
+}
 
- .agent_fee_btn button{
-width: 100%;
+.agent_fee_btn button {
+  width: 100%;
 
-font-size: 18px;
-background-color: #191970;
-color: white;
-font-weight: bold;
-border: 3px solid #1e90ff;
-padding: 7px 0px;
+  font-size: 18px;
+  background-color: #191970;
+  color: white;
+  font-weight: bold;
+  border: 3px solid #1e90ff;
+  padding: 7px 0px;
+}
 
- }
- 
- .select_day_time_ramp{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 15px;
-    font-weight: bold;
-    margin-top: 30px;
-    font-size: 20px;
-    color: #191970;
- }
+.select_day_time_ramp {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+  font-weight: bold;
+  margin-top: 30px;
+  font-size: 20px;
+  color: #191970;
+}
+
+.calender_ramp {
+  display: flex;
+  flex-direction: column;
+}
+
+.days_time_ramp {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 10px;
+  border: solid;
+  border-left: none;
+  border-right: none;
+  margin-top: 5px;
+}
+
+.calendar_ramp button.selected {
+  background-color: green;
+  color: white;
+  border-color: darkgreen;
+}
+
+.selected_date_time_ramp {
+  width: 80%;
+
+  padding: 10px 15px;
+  font-size: 18px;
+  background-color: #191970;
+  color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: 1000;
+  border-radius: 15px;
+}
+
+.selected_date_time_ramp p {
+  margin-top: 6px;
+}
+.selected_date_time_ramp h4 {
+  text-align: center;
+  margin-bottom: 10px;
+  word-spacing: 3px;
+}
+
+.no_yes{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
 
 
-
-
- .calender_ramp{
-    display: flex;
-    flex-direction: column;
-   
-  }
-
-
-  .days_time_ramp{
-    display: flex;
-    justify-content: space-between;
-    padding: 3px 10px;
-    border: solid;
-    border-left: none;
-    border-right: none;
-   
-  }
-
-  .calendar_ramp button.selected {
-    background-color: green;
-    color: white;
-    border-color: darkgreen;
-  }
-
-
-
-  .selected_date_time_ramp{
-    padding:3px 5px;
-    font-size: 18px;
-    background-color: azure;
-  }
-  .selected_date_time_ramp p{
-    margin-top: 5px;
-  }
-
-
-  .selectedRoom_section{
-    padding-left: 5px;
-    height: 317px;
-    overflow: auto;
-    border-bottom: solid 3px;
-    
-  }
-  .selectedRoom_section div{
-    margin-top: 3px;
-    font-weight: bold;
-    padding-bottom: 2px;
-  
-    
-  }
-  .selectedRoom_section div h3{
-    color: rgb(14, 14, 165);
-  }
-  .selectedRoom_section div span{
-    font-weight: 100;
-  }
-  .parent_ramp{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 20px;
-    margin-top: 3px;
-    font-weight: bold;
-    padding-bottom: 2px;
-  }
-
-  .the_checkbox{
-transform: scale(1.5);
-accent-color: #191970;
-  }
+.no_yes button{
+  width: 25%;
+  height: 1.5rem;
+  font-size:18px;
+  font-weight: bold;
+  padding: 0px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 
+.selectedRoom_section {
+  padding-left: 5px;
+  height: 317px;
+  overflow: auto;
+  border-bottom: solid 3px;
+}
+.selectedRoom_section div {
+  margin-top: 3px;
+  font-weight: bold;
+  padding-bottom: 2px;
+}
+.selectedRoom_section div h3 {
+  color: rgb(14, 14, 165);
+}
+.selectedRoom_section div span {
+  font-weight: 100;
+}
+.parent_ramp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 20px;
+  margin-top: 3px;
+  font-weight: bold;
+  padding-bottom: 2px;
+}
 
+.the_checkbox {
+  transform: scale(1.5);
+  accent-color: #191970;
+}
 
-
-
-
-
+.calender_div{
+  width: 90%;
+  /* background-color: red; */
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}

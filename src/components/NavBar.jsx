@@ -70,6 +70,7 @@ function NavBar() {
           <div>Guru Home (K.S.U. Molete)</div>
           <div onClick={()=>{navigate("/AdminHome")}}>ADMIN DASHBOARD</div>
           <div onClick={()=>{navigate("/Profile")}}>USER PROFILE</div>
+          <div onClick={()=>{navigate("/AdminLogin")}}>ADMIN LOGIN PAGE</div>
         </div>
       )}
     </div>
